@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbit Accessibility Assistant</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="logo" href="/" aria-label="Gravity — home">gravity</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list" role="list">
+          <li><a class="nav-link" href="#" aria-current="page">JumpTo</a></li>
+          <li><a class="nav-link" href="#">JumpTo</a></li>
+          <li><a class="nav-link" href="#">JumpTo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <!-- <div class="hero-content"> -->
+      <p class="eyebrow">Introducing Orbit v1.0</p>
+      <h1 class="hero-heading">Lorem, ipsum dolor. <em>lorem</em> ipsum</h1>
+      <div class="actions">
+        <a class="btn primary" href="#">Try Now</a>
+        <a class="btn ghost" href="#">Learn More</a>
+        <!-- </div> -->
+    </section>
+
+    <!-- Partners -->
+    <section class="tech" aria-labelledby="tech-heading">
+      <div class="container">
+        <div class="tech-inner">
+          <h2 id="tech-heading" class="tech-label">
+            The tech stack we sed on the Orbit project.
+          </h2>
+          <ul class="logo-list" role="list">
+            <li>
+              <div class="stack-icon" role="img" aria-label="Language Name">
+                STACK ICON
+              </div>
+            </li>
+            <li>
+              <div class="stack-icon" role="img" aria-label="Language Name">
+                STACK ICON
+              </div>
+            </li>
+            <li>
+              <div class="stack-icon" role="img" aria-label="Language Name">
+                STACK ICON
+              </div>
+            </li>
+            <li>
+              <div class="stack-icon" role="img" aria-label="Language Name">
+                STACK ICON
+              </div>
+            </li>
+            <li>
+              <div class="stack-icon" role="img" aria-label="Language Name">
+                STACK ICON
+              </div>
+            </li>
+            <li>
+              <div class="stack-icon" role="img" aria-label="Language Name">
+                STACK ICON
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="statement section" aria-labelledby="statement-heading">
+      <div class="container">
+        <h2 id="statement-heading" class="sr-only">Titel</h2>
+        <blockquote class="quote" cite="https://gravity.ai/about">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo deserunt unde enim iste quasi beatae? Culpa aperiam praesentium accusantium?
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Model cards -->
+    <section class="cards-strip" aria-labelledby="models-heading">
+      <div class="container">
+        <h2 class="strip-heading">ORBIT FEATURES... CHANGE THIS TEXT LATER</h2>
+
+        <!-- collection of related items grouped in UL (semantic) -->
+        <ul class="card-flex" role="list">
+
+          <li>
+            <article class="card" aria-labelledby="card-1-title">
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+              <p>ORBIT FEATURE #1</p>
+              <h3 id="card-title">Title</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <div class="card-actions">
+                <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
+                <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="card" aria-labelledby="card-2-title">
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+              <p>ORBIT FEATURE #2</p>
+              <h3 id="card-title">Title</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <div class="card-actions">
+                <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
+                <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="card" aria-labelledby="card-3-title">
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+              <p>ORBIT FEATURE #3</p>
+              <h3 id="card-title">Title</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <div class="card-actions">
+                <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
+                <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="card" aria-labelledby="card-4-title">
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+              <p>ORBIT FEATURE #3</p>
+              <h3 id="card-title">Title</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <div class="card-actions">
+                <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
+                <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="research" aria-labelledby="research-heading">
+      <div class="container">
+        <div class="research-inner">
+
+          <div class="research-copy">
+            <p>Orbit Research</p>
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos omnis alias tenetur est esse corporis eligendi dicta voluptas distinctio. Ex recusandae aut mollitia facilis tempora error iusto porro atque optio.</p>
+            <a href="#">
+              Learn More<span class="sr-only"> about Orbit's Research</span>
+            </a>
+          </div>
+
+          <nav aria-label="Orbit something....">
+            <ul role="list">
+              <li>
+                <a href="#">
+                  <div>
+                    <span>Title 1</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis distinctio consectetur doloremque tempora in sequi debitis voluptates libero commodi dicta!</p>
+                  </div>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div>
+                    <span>Title 2</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis distinctio consectetur doloremque tempora in sequi debitis voluptates libero commodi dicta!</p>
+                  </div>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div>
+                    <span>Title 3</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis distinctio consectetur doloremque tempora in sequi debitis voluptates libero commodi dicta!</p>
+                  </div>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Phases -->
+    <section class="section" aria-labelledby="products-heading">
+      <div class="container">
+        <h2>title</h2>
+        <ul role="list">
+
+          <li>
+            <article aria-labelledby="item-1-title">
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+      </div>
+      <div>
+        <h3 id="item-1-title">Orbit Phase 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor similique delectus, porro, laudantium quas harum placeat dolore nemo qui reprehenderit, nesciunt ipsum odit beatae consectetur? Dolorem magni, reiciendis dolore saepe quas optio labore nam.</p>
+        <a class="btn primary" href="#">
+          Learn More<span class="sr-only"> about Phase 1</span>
+        </a>
+      </div>
+      </article>
+      </li>
+
+      <li>
+        <article aria-labelledby="item-2-title">
+          <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+          <div>
+            <h3 id="item-2-title">Orbit Phase 2</h3>
+            <p>We are building foundational General World Models that will be capable of simulating all possible
+              worlds and experiences. The next frontier of intelligence will come from models that can understand,
+              perceive, generate.</p>
+            <a class="btn primary" href="#">
+              Learn More<span class="sr-only"> about Phase 2</span>
+            </a>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article aria-labelledby="item-3-title">
+          <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+          <div>
+            <h3 id="item-3-title">Orbit Phase 3</h3>
+            <p>We are building foundational General World Models that will be capable of simulating all possible
+              worlds and experiences. The next frontier of intelligence will come from models that can understand,
+              perceive, generate.</p>
+            <a class="btn primary" href="#">
+              Learn More<span class="sr-only"> about Phase 3</span>
+            </a>
+          </div>
+        </article>
+      </li>
+
+      </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-logo" href="/" aria-label="Gravity — home">gravity</a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a class="footer-link" href="#">Privacy</a></li>
+            <li><a class="footer-link" href="#">Terms</a></li>
+            <li><a class="footer-link" href="#">Research</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <p class="copyright"><small>© 2026 Gravity</small></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

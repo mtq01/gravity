@@ -1,0 +1,39 @@
+/* Visually hide elements while keeping them accessible to screen readers */
+.sr-only {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Skip to main content link for keyboard users */
+.skip-link {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* What happens when you tab to skip-link */
+.skip-link:focus {
+    position: absolute;
+    clip-path: none;
+    top: 1rem;
+    left: 1rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    white-space: normal;
+    background: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+
