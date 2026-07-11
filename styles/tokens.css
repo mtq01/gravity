@@ -40,6 +40,13 @@ clamp(min, preferred, max)
     --space-3xl: 6rem;
     --space-4xl: 8rem;
 
+    /* ----- gap ----- */
+    --gap-1: 1rem;
+    --gap-2: 2rem;
+    --gap-3: 3rem;
+    --gap-4: 4rem;
+
+
     /* ----- nav link ----- */
     --space-nav-link: 0.125rem 1rem;
 

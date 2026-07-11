@@ -69,10 +69,10 @@
 
 /* ++++++++++ statement ++++++++++++++++++++++++++++++++++++++++++ */
 .statement {
-    min-height: 31.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: var(--color-bg-dark);
+    border-radius: var(--radius-10);
+    color: var(--color-text-light);
+    padding: var(--space-4xl);
 }
 
 .quote {
