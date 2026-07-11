@@ -17,6 +17,7 @@ main,
 header {
     padding: 0.5rem 1.1rem;
 }
+
 /* header content */
 .header-inner {
     display: flex;
@@ -89,26 +90,30 @@ main {
 
 /* ++++++++++ features ++++++++++++++++++++++++++++++++++++++++++ */
 
+.features-card-container {
+    padding: 0 5rem;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-1);
+}
+
 .card {
     display: flex;
     flex-direction: column;
     gap: var(--gap-1);
 }
 
-.card-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap-1);
-}
-
-.card-flex>li {
-    flex: 1 1 300px;
+.feature-cards>li {
     /* grow, shrink, base width */
+    flex: 1 1 200px;
 }
 
 .card-img {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1;
 }
 
 /* ++++++++++ research ++++++++++++++++++++++++++++++++++++++++++ */
@@ -243,6 +248,4 @@ main {
 }
 
 /* desktop */
-@media (min-width: 64em) {
-
-}
+@media (min-width: 64em) {}

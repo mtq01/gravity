@@ -92,19 +92,23 @@
     text-align: center;
 }
 
-/* ++++++++++ cards ++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++ features ++++++++++++++++++++++++++++++++++++++++++ */
 
 .card-title {
     font-size: var(--text-2xl);
 }
 
-.card-flex {
+.feature-cards {
     list-style-type: none;
 }
 
 .card-img {
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: var(--radius-5);
+}
+
+.card-actions a:hover {
+    text-decoration: none;
 }
 
 /* ++++++++++ research ++++++++++++++++++++++++++++++++++++++++++ */
