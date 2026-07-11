@@ -31,6 +31,7 @@ clamp(min, preferred, max)
     --text-hero-h1: clamp(2rem, 5vw + 1rem, 4rem);
 
     /* ----- spacing ----- */
+    --space-xxs: 0.25rem;
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
@@ -64,6 +65,7 @@ clamp(min, preferred, max)
     --color-muted:     #888884;
 
     /* Border Radius */
+    --radius-5: 5px;
     --radius-10: 10px;
 
     /* Breakpoints

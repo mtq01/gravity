@@ -9,14 +9,16 @@
 
 main,
 .site-footer {
-    padding: var(--space-md);
+    padding: var(--space-sm);
 }
 
 /* ++++++++++ header ++++++++++++++++++++++++++++++++++++++++++ */
 
+header {
+    padding: 0.5rem 1.1rem;
+}
 /* header content */
 .header-inner {
-    padding: 0.5rem 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,6 +33,7 @@ main,
 /* ++++++++++ hero ++++++++++++++++++++++++++++++++++++++++++ */
 
 main {
+    padding-top: 0;
     gap: var(--gap-4);
 }
 
