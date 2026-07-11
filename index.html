@@ -36,7 +36,7 @@
       <video class="hero-video" data-video-toggle autoplay muted loop playsinline poster="orbit-poster.jpg">
         <source src="orbit-video.mp4" type="video/mp4">
       </video>
-      
+
       <div class="hero-content">
         <p class="eyebrow">Introducing Orbit v1.0</p>
         <h1 class="hero-heading">Building <em>accessibility</em> into every tab you open.</h1>
@@ -56,7 +56,7 @@
     </section>
 
     <!-- Tech Stack -----------------------------------------------  -->
-    <section class="tech" aria-labelledby="tech-heading">
+    <!-- <section class="tech" aria-labelledby="tech-heading">
       <div class="container">
         <div class="tech-inner">
           <h2 id="tech-heading" class="tech-label">
@@ -96,7 +96,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Statement -->
     <section class="statement" aria-labelledby="statement-heading">
@@ -242,9 +242,10 @@
 
         <li>
           <article aria-labelledby="item-1-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="phase-img">
-            <div>
-              <h3 id="item-1-title">Foundation (Shipped)</h3>
+            <img src="orbit-foundation.jpg" alt="" class="phase-img">
+            <div class="phase-content">
+              <span class="phase-date">July 2026</span>
+              <h3 id="item-1-title">Foundation</h3>
               <p>The core toolkit: automated axe-core scanning, a tab-order and high-contrast visualizer, a WCAG
                 contrast
                 checker, and The A11y Project's checklist — all built into a single Chrome extension.</p>
@@ -257,8 +258,9 @@
 
         <li>
           <article aria-labelledby="item-2-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="phase-img">
-            <div>
+            <div class="phase-content">
+              <span class="phase-date">July 2026</span>
+
               <h3 id="item-2-title">Reporting</h3>
               <p>Exportable reports that clearly separate automated findings from manual checklist items, so teams
                 know
@@ -267,13 +269,16 @@
                 Learn More<span class="sr-only"> about Phase 2</span>
               </a>
             </div>
+            <img src="orbit-moon.jpg" alt="" class="phase-img">
           </article>
         </li>
 
         <li>
           <article aria-labelledby="item-3-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="phase-img">
-            <div>
+            <img src="orbit-radar.jpg" alt="" class="phase-img">
+            <div class="phase-content">
+              <span class="phase-date">July 2026</span>
+
               <h3 id="item-3-title">Cross-browser & Team Support</h3>
               <p>Bringing Orbit beyond Chrome (Firefox/Edge support) and adding team-facing features like shared scan
                 history or project-level tracking.</p>
@@ -304,7 +309,7 @@
         <div class="methodology-container">
           <div class="methodology-list-container">
             <!-- What's Automated -->
-            <h3>What We Automate</h3>
+            <h3>What's Automated</h3>
             <ul class="methodology-list" role="list">
               <li>Missing or empty alt attributes</li>
               <li>Insufficient color contrast ratios</li>
@@ -319,15 +324,14 @@
 
           <!-- What is NOT Automated -->
           <div class="methodology-list-container">
-            <h3>What We Don't</h3>
+            <h3>What Isn't</h3>
             <ul class="methodology-list" role="list">
-              <li>Whether alt text is accurate and meaningful, not just present</li>
-              <li>Whether reading order makes logical sense to a screen reader user</li>
-              <li>Whether a custom widget is actually operable with a keyboard, not just tagged correctly</li>
-              <li>Whether error messages are genuinely clear and actionable</li>
-              <li>Whether content makes sense when read out of visual context</li>
-              <li>Whether an interaction pattern is intuitive for someone using a screen reader or switch device
-                day-to-day</li>
+              <li>Alt text accuracy and meaning, not just presence</li>
+              <li>Logical reading order for screen reader users</li>
+              <li>True keyboard operability of custom widgets</li>
+              <li>Clarity of error messages</li>
+              <li>Content that makes sense out of visual context</li>
+              <li>Intuitive interactions for screen reader and switch device users</li>
             </ul>
           </div>
         </div>

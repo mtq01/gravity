@@ -67,6 +67,7 @@ main {
 
 .tech {
     min-height: 15.625rem;
+    padding: var(--space-4xl);
 }
 
 .logo-list {
@@ -183,28 +184,44 @@ main {
 /* ++++++++++ phases ++++++++++++++++++++++++++++++++++++++++++ */
 
 .phases {
-    min-height: 500px;
+    min-height: 31.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    padding: 0 5rem;
 }
 
 .phase-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-}
-
-.phase-list>li {
-    display: flex;
-}
-
-.phase-list article {
     display: flex;
     flex-direction: column;
+    gap: var(--gap-5);
+}
+.phase-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+    justify-content: center;
+}
+.phase-list article {
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    gap: var(--gap-1);
 }
 
-.phase-img {
-    width: 100%;
+.phase-list article .phase-img {
+    flex: 0 0 50%;
+    /* aspect-ratio needs an explicit width to calculate height from */
+    width: 50%;
     aspect-ratio: 16/9;
+}
+
+.phase-date {
+    padding: var(--space-xxs) var(--space-sm);
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+    width: fit-content;
+    border-radius: var(--radius-5);
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
@@ -219,9 +236,11 @@ main {
 .methodology-inner {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-2);
+    gap: var(--gap-3);
 }
-
+.methodology-inner p {
+    font-size: var(--text-lg);
+}
 .methodology-container {
     display: flex;
     justify-content: space-between;
@@ -231,6 +250,7 @@ main {
 
 .methodology-list {
     padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-lg);
 }
 
 .methodology-list-container {
