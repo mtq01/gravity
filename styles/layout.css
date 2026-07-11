@@ -1,6 +1,239 @@
-/* mobile */
+/* ++++++++++ globals ++++++++++++++++++++++++++++++++++++++++++ */
+.max-w-1600 {
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+main,
+.site-footer {
+    padding: var(--space-md);
+}
+
+/* ++++++++++ header ++++++++++++++++++++++++++++++++++++++++++ */
+
+/* header content */
+.header-inner {
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ++++++++++ hero ++++++++++++++++++++++++++++++++++++++++++ */
+
+main {
+    gap: 2rem;
+}
+
+.hero::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 85dvh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* ++++++++++ tech stack ++++++++++++++++++++++++++++++++++++++++++ */
+
+.tech {
+    min-height: 15.625rem;
+}
+
+.logo-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.logo-list li {
+    padding: var(--space-md);
+}
+
+
+/* ++++++++++ statement ++++++++++++++++++++++++++++++++++++++++++ */
+
+.statement {
+    min-height: 31.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ++++++++++ cards ++++++++++++++++++++++++++++++++++++++++++ */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-flex>li {
+    flex: 1 1 300px;
+    /* grow, shrink, base width */
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+/* ++++++++++ research ++++++++++++++++++++++++++++++++++++++++++ */
+
+.research::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+}
+
+.research {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.research-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.research-inner {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+    padding: var(--space-4xl);
+    z-index: 2;
+}
+
+.research-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.research-list-links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.research-link-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.research-copy>p {
+    width: 50%;
+}
+
+.research-nav {
+    flex: 0 0 40%;
+}
+
+.research-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ++++++++++ phases ++++++++++++++++++++++++++++++++++++++++++ */
+
+.phases {
+    min-height: 500px;
+}
+
+.phase-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.phase-list>li {
+    display: flex;
+}
+
+.phase-list article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
+
+.methodology {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: var(--space-4xl);
+}
+
+.methodology-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.methodology-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+}
+
+.methodology-list {
+    padding: var(--space-sm) var(--space-lg);
+}
+
+.methodology-list-container {
+    flex: 0 0 50%;
+}
+
+/* ++++++++++ footer ++++++++++++++++++++++++++++++++++++++++++ */
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+}
 
 /* desktop */
-@media (min-width: 64em) {
-
-}
+@media (min-width: 64em) {}

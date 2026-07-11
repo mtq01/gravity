@@ -14,6 +14,8 @@ clamp(min, preferred, max)
     --color-bg: #FCF8F8;
     --color-text: #181717;
     --color-accent: #1D4ED8;
+    --color-bg-dark: #060D20;
+    --color-text-light: #FCF8F8;
 
     /* ----- typography ----- */
     --font-body: 'Atkinson Hyperlegible', Arial, sans-serif;
@@ -53,6 +55,9 @@ clamp(min, preferred, max)
     --color-border:    rgba(255,255,255,0.08);
     --color-fg-dark:   #f0f0eb;
     --color-muted:     #888884;
+
+    /* Border Radius */
+    --radius-10: 10px;
 
     /* Breakpoints
         sm:  480px

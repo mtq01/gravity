@@ -12,68 +12,74 @@
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header" role="banner">
+  <header class="site-header max-w-1600" role="banner">
     <div class="header-inner">
-      <a class="logo" href="/" aria-label="Gravity — home">gravity</a>
+      <a class="logo" href="/" aria-label="Orbit — home">Orbit</a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul class="nav-list" role="list">
-          <li><a class="nav-link" href="#" aria-current="page">JumpTo</a></li>
-          <li><a class="nav-link" href="#">JumpTo</a></li>
-          <li><a class="nav-link" href="#">JumpTo</a></li>
+          <li><a class="nav-link" href="#overview" aria-current="page">Overview</a></li>
+          <li><a class="nav-link" href="#features">Features</a></li>
+          <li><a class="nav-link" href="#research">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main-content" tabindex="-1">
+  <main id="main-content" class="max-w-1600" tabindex="-1">
 
-    <!-- Hero -->
+    <!-- Hero -----------------------------------------------  -->
     <section class="hero" aria-labelledby="hero-heading">
-      <!-- <div class="hero-content"> -->
-      <p class="eyebrow">Introducing Orbit v1.0</p>
-      <h1 class="hero-heading">Lorem, ipsum dolor. <em>lorem</em> ipsum</h1>
-      <div class="actions">
-        <a class="btn primary" href="#">Try Now</a>
-        <a class="btn ghost" href="#">Learn More</a>
-        <!-- </div> -->
+      <video class="hero-video" autoplay muted loop playsinline poster="orbit-poster.jpg">
+        <source src="orbit-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <p class="eyebrow">Introducing Orbit v1.0</p>
+        <h1 class="hero-heading">Building <em>accessibility</em> into every tab you open.</h1>
+        <p class="sub-head">Orbit catches what automated tools can catch and points you to what still needs the human
+          touch. Scan, visualize, and check contrast right in your browser.</p>
+        <div class="actions">
+          <a class="btn primary" href="#">Try Now</a>
+          <a class="btn ghost" href="#">Learn More</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Partners -->
+    <!-- Tech Stack -----------------------------------------------  -->
     <section class="tech" aria-labelledby="tech-heading">
       <div class="container">
         <div class="tech-inner">
           <h2 id="tech-heading" class="tech-label">
-            The tech stack we sed on the Orbit project.
+            The tech stack
           </h2>
           <ul class="logo-list" role="list">
             <li>
               <div class="stack-icon" role="img" aria-label="Language Name">
-                STACK ICON
+                React
               </div>
             </li>
             <li>
               <div class="stack-icon" role="img" aria-label="Language Name">
-                STACK ICON
+                TypeScript
               </div>
             </li>
             <li>
               <div class="stack-icon" role="img" aria-label="Language Name">
-                STACK ICON
+                Tailwind
               </div>
             </li>
             <li>
               <div class="stack-icon" role="img" aria-label="Language Name">
-                STACK ICON
+                Chrome API
               </div>
             </li>
             <li>
               <div class="stack-icon" role="img" aria-label="Language Name">
-                STACK ICON
+                axe-core
               </div>
             </li>
             <li>
               <div class="stack-icon" role="img" aria-label="Language Name">
-                STACK ICON
+                a11y project
               </div>
             </li>
           </ul>
@@ -83,18 +89,17 @@
 
     <!-- Statement -->
     <section class="statement section" aria-labelledby="statement-heading">
-      <div class="container">
-        <h2 id="statement-heading" class="sr-only">Titel</h2>
+        <h2 id="statement-heading" class="sr-only">What Orbit is Built With</h2>
         <blockquote class="quote" cite="https://gravity.ai/about">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo deserunt unde enim iste quasi beatae? Culpa aperiam praesentium accusantium?
+          Orbit catches real, fixable issues
+          fast, but it can't tell you if your alt text actually makes sense, or if your interface is genuinely usable
+          with a screen reader.
         </blockquote>
-      </div>
     </section>
 
-    <!-- Model cards -->
-    <section class="cards-strip" aria-labelledby="models-heading">
-      <div class="container">
-        <h2 class="strip-heading">ORBIT FEATURES... CHANGE THIS TEXT LATER</h2>
+    <!-- Features -----------------------------------------------  -->
+    <section id="features" class="cards-strip" aria-labelledby="models-heading">
+        <h2 class="strip-heading">Features</h2>
 
         <!-- collection of related items grouped in UL (semantic) -->
         <ul class="card-flex" role="list">
@@ -102,9 +107,10 @@
           <li>
             <article class="card" aria-labelledby="card-1-title">
               <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-              <p>ORBIT FEATURE #1</p>
-              <h3 id="card-title">Title</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <h3 class="card-title">Automated Violation Scanning</h3>
+              <p>Real-time WCAG audits, powered by axe-core. Point it at any page and see every automatically-detectable
+                violation, ranked by severity. Things like missing labels, low contrast, and invalid ARIA. This is a
+                fast first pass, not a full audit.</p>
               <div class="card-actions">
                 <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
                 <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
@@ -115,9 +121,10 @@
           <li>
             <article class="card" aria-labelledby="card-2-title">
               <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-              <p>ORBIT FEATURE #2</p>
-              <h3 id="card-title">Title</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <h3 class="card-title">Tab Order & High Contrast</h3>
+              <p>Some issues can't be scanned, only seen. A numbered overlay traces keyboard focus order across the
+                page, and high contrast mode previews low-vision rendering — surfacing the kind of problems no rules
+                engine catches.</p>
               <div class="card-actions">
                 <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
                 <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
@@ -128,9 +135,9 @@
           <li>
             <article class="card" aria-labelledby="card-3-title">
               <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-              <p>ORBIT FEATURE #3</p>
-              <h3 id="card-title">Title</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <h3 class="card-title">Color Contrast Checker</h3>
+              <p>Pick a foreground and background color and get an instant AA/AAA verdict against WCAG 2.x thresholds —
+                useful for validating a design decision before it ships.p>
               <div class="card-actions">
                 <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
                 <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
@@ -141,9 +148,10 @@
           <li>
             <article class="card" aria-labelledby="card-4-title">
               <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-              <p>ORBIT FEATURE #3</p>
-              <h3 id="card-title">Title</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eius aspernatur! Necessitatibus nobis tempore doloribus.</p>
+              <h3 class="card-title">A11y Project Checklist</h3>
+              <p>Automated scanning has real limits. This tab surfaces The A11y Project's community-maintained checklist
+                — the manual, human-judgment checks that fill in what axe-core can't see — with full credit and
+                attribution per their open license.</p>
               <div class="card-actions">
                 <a href="#">Try Now<span class="sr-only"> Version 1.0</span></a>
                 <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
@@ -152,130 +160,191 @@
           </li>
 
         </ul>
-      </div>
     </section>
 
-    <!-- Research -->
-    <section class="research" aria-labelledby="research-heading">
-      <div class="container">
-        <div class="research-inner">
+    <!-- Research -----------------------------------------------  -->
+    <section id="research" class="research" aria-labelledby="research-heading">
 
-          <div class="research-copy">
-            <p>Orbit Research</p>
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos omnis alias tenetur est esse corporis eligendi dicta voluptas distinctio. Ex recusandae aut mollitia facilis tempora error iusto porro atque optio.</p>
-            <a href="#">
-              Learn More<span class="sr-only"> about Orbit's Research</span>
-            </a>
-          </div>
+      <video class="research-video" autoplay muted loop playsinline poster="research-poster.jpg">
+        <source src="orbit-moon.mp4" type="video/mp4">
+      </video>
 
-          <nav aria-label="Orbit something....">
-            <ul role="list">
-              <li>
-                <a href="#">
-                  <div>
-                    <span>Title 1</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis distinctio consectetur doloremque tempora in sequi debitis voluptates libero commodi dicta!</p>
-                  </div>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    <span>Title 2</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis distinctio consectetur doloremque tempora in sequi debitis voluptates libero commodi dicta!</p>
-                  </div>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div>
-                    <span>Title 3</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis distinctio consectetur doloremque tempora in sequi debitis voluptates libero commodi dicta!</p>
-                  </div>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+      <div class="research-inner">
 
+        <div class="research-copy">
+          <p>About Orbit</p>
+          <h2>Built on open standards, not guesswork.</h2>
+          <p class="research-paragraph">Orbit doesn't invent its own accessibility rules. It's built on axe-core, the
+            same engine used by major
+            testing tools industry-wide, and pairs it with WCAG 2.x contrast math and The A11y Project's
+            community-maintained checklist — so what you see in Orbit reflects established, peer-reviewed
+            accessibility guidance.</p>
+          <!-- <a href="#" class="research-link">
+            Learn More<span class="sr-only"> about Orbit's Research</span>
+          </a> -->
         </div>
+
+        <nav class="research-nav" aria-label="Orbit something....">
+          <ul class="research-list" role="list">
+
+            <li class="research-list-links">
+              <a href="#">
+                <div class="research-link-content">
+                  <h3>Axe-core</h3>
+                  <p>The open-source accessibility testing engine that powers Orbit's automated scans, built and
+                    maintained by Deque Systems and used across the industry.</p>
+                </div>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <hr>
+            </li>
+            <li class="research-list-links">
+              <a href="#">
+                <div class="research-link-content">
+                  <h3>WCAG Guidelines</h3>
+                  <p>The Web Content Accessibility Guidelines. The official W3C standard that defines what "accessible"
+                    means, and the benchmark Orbit's contrast checker and scanner test against.</p>
+                </div>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <hr>
+            </li>
+            <li class="research-list-links">
+              <a href="#">
+                <div class="research-link-content">
+                  <h3>The A11y Project</h3>
+                  <p>A community-driven effort making web accessibility easier to understand, with practical resources
+                    and the checklist that powers Orbit's manual audit tab.</p>
+                </div>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
       </div>
     </section>
 
-    <!-- Phases -->
-    <section class="section" aria-labelledby="products-heading">
-      <div class="container">
-        <h2>title</h2>
-        <ul role="list">
+    <!-- Phases -----------------------------------------------  -->
+    <section class="phases" aria-labelledby="products-heading">
+
+        <h2>What's next for Orbit</h2>
+        <ul class="phase-list" role="list">
 
           <li>
             <article aria-labelledby="item-1-title">
               <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-      </div>
-      <div>
-        <h3 id="item-1-title">Orbit Phase 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor similique delectus, porro, laudantium quas harum placeat dolore nemo qui reprehenderit, nesciunt ipsum odit beatae consectetur? Dolorem magni, reiciendis dolore saepe quas optio labore nam.</p>
-        <a class="btn primary" href="#">
-          Learn More<span class="sr-only"> about Phase 1</span>
-        </a>
-      </div>
-      </article>
-      </li>
+              <div>
+                <h3 id="item-1-title">Foundation (Shipped)</h3>
+                <p>The core toolkit: automated axe-core scanning, a tab-order and high-contrast visualizer, a WCAG
+                  contrast
+                  checker, and The A11y Project's checklist — all built into a single Chrome extension.</p>
+                <a class="btn primary" href="#">
+                  Learn More<span class="sr-only"> about Phase 1</span>
+                </a>
+              </div>
+            </article>
+          </li>
 
-      <li>
-        <article aria-labelledby="item-2-title">
-          <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-          <div>
-            <h3 id="item-2-title">Orbit Phase 2</h3>
-            <p>We are building foundational General World Models that will be capable of simulating all possible
-              worlds and experiences. The next frontier of intelligence will come from models that can understand,
-              perceive, generate.</p>
-            <a class="btn primary" href="#">
-              Learn More<span class="sr-only"> about Phase 2</span>
-            </a>
+          <li>
+            <article aria-labelledby="item-2-title">
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+              <div>
+                <h3 id="item-2-title">Reporting</h3>
+                <p>Exportable reports that clearly separate automated findings from manual checklist items, so teams
+                  know
+                  what's been verified and what still needs a human pass.</p>
+                <a class="btn primary" href="#">
+                  Learn More<span class="sr-only"> about Phase 2</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article aria-labelledby="item-3-title">
+              <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+              <div>
+                <h3 id="item-3-title">Cross-browser & Team Support</h3>
+                <p>Bringing Orbit beyond Chrome (Firefox/Edge support) and adding team-facing features like shared scan
+                  history or project-level tracking.</p>
+                <a class="btn primary" href="#">
+                  Learn More<span class="sr-only"> about Phase 3</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+    </section>
+
+
+    <!-- Methodology -----------------------------------------------  -->
+    <section id="overview" class="methodology" aria-labelledby="methodology-heading">
+
+        <div class="methodology-inner">
+          <h2 id="methodology-heading" class="methodology-label">
+            Methodology
+          </h2>
+
+          <p>Orbit automates what can be reliably automated, and is explicit about the rest. Automated tools like
+            axe-core are excellent at catching objective, rule-based violations — but a meaningful share of WCAG success
+            criteria require human judgment. Orbit is built around that line, not around pretending it doesn't exist.
+          </p>
+
+          <div class="methodology-container">
+            <div class="methodology-list-container">
+              <!-- What's Automated -->
+              <h3>What We Automate</h3>
+              <ul class="methodology-list" role="list">
+                <li>Missing or empty alt attributes</li>
+                <li>Insufficient color contrast ratios</li>
+                <li>Missing form labels</li>
+                <li>Invalid or misused ARIA attributes</li>
+                <li>Missing document landmarks</li>
+                <li>Duplicate IDs</li>
+                <li>Missing page language attributes</li>
+                <li>Heading structure issues (ex. skipped levels)</li>
+              </ul>
+            </div>
+
+            <!-- What is NOT Automated -->
+            <div class="methodology-list-container">
+              <h3>What We Don't</h3>
+              <ul class="methodology-list" role="list">
+                <li>Whether alt text is accurate and meaningful, not just present</li>
+                <li>Whether reading order makes logical sense to a screen reader user</li>
+                <li>Whether a custom widget is actually operable with a keyboard, not just tagged correctly</li>
+                <li>Whether error messages are genuinely clear and actionable</li>
+                <li>Whether content makes sense when read out of visual context</li>
+                <li>Whether an interaction pattern is intuitive for someone using a screen reader or switch device
+                  day-to-day</li>
+              </ul>
+            </div>
           </div>
-        </article>
-      </li>
 
-      <li>
-        <article aria-labelledby="item-3-title">
-          <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-          <div>
-            <h3 id="item-3-title">Orbit Phase 3</h3>
-            <p>We are building foundational General World Models that will be capable of simulating all possible
-              worlds and experiences. The next frontier of intelligence will come from models that can understand,
-              perceive, generate.</p>
-            <a class="btn primary" href="#">
-              Learn More<span class="sr-only"> about Phase 3</span>
-            </a>
-          </div>
-        </article>
-      </li>
+          <p>No automated scanner, including Orbit, can verify these. They require a human tester, ideally one using the
+            assitive technology in question.</p>
 
-      </ul>
       </div>
     </section>
 
+
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
+  <!-- footer ----------------------------------------------- -->
+  <footer class="site-footer max-w-1600" role="contentinfo">
       <div class="footer-inner">
-        <a class="footer-logo" href="/" aria-label="Gravity — home">gravity</a>
-        <nav aria-label="Footer navigation">
+        <a class="footer-logo" href="/" aria-label="Orbit — home">Orbit Logo</a>
+        <nav class="footer-nav" aria-label="Footer navigation">
           <ul class="footer-links" role="list">
-            <li><a class="footer-link" href="#">Privacy</a></li>
-            <li><a class="footer-link" href="#">Terms</a></li>
-            <li><a class="footer-link" href="#">Research</a></li>
-            <li><a class="footer-link" href="#">Careers</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Research</a></li>
           </ul>
         </nav>
-        <p class="copyright"><small>© 2026 Gravity</small></p>
       </div>
-    </div>
+      <p class="copyright"><small>© 2026 Orbit</small></p>
   </footer>
 
 </body>
