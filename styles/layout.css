@@ -124,7 +124,7 @@ main {
 }
 
 .research {
-    min-height: 500px;
+    min-height: 31.25rem;
     display: flex;
     align-items: center;
     z-index: 0;
@@ -196,12 +196,14 @@ main {
     flex-direction: column;
     gap: var(--gap-5);
 }
+
 .phase-content {
     display: flex;
     flex-direction: column;
     gap: var(--gap-1);
     justify-content: center;
 }
+
 .phase-list article {
     display: flex;
     flex-direction: row;
@@ -227,6 +229,7 @@ main {
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
 
 .methodology {
+    min-height: 40.625rem;
     display: flex;
     align-items: center;
     gap: var(--gap-4);
@@ -238,9 +241,11 @@ main {
     flex-direction: column;
     gap: var(--gap-3);
 }
+
 .methodology-inner p {
     font-size: var(--text-lg);
 }
+
 .methodology-container {
     display: flex;
     justify-content: space-between;
