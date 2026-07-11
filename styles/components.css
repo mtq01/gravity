@@ -1,3 +1,14 @@
+/* global */
+
+.video-toggle {
+    background: transparent;
+    width: fit-content;
+    color: white;
+    font-size: 4rem;
+    border: 0;
+    cursor: pointer;
+}
+
 /* ++++++++++ header ++++++++++++++++++++++++++++++++++++++++++ */
 
 .site-header {
@@ -138,10 +149,16 @@
     margin: 1rem 0;
 }
 
+
+
 /* ++++++++++ phases ++++++++++++++++++++++++++++++++++++++++++ */
 
 .phase-list {
     list-style-type: none;
+}
+
+.phase-img {
+    border-radius: var(--radius-10);
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */

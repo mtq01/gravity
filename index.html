@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orbit Accessibility Assistant</title>
   <link rel="stylesheet" href="./styles/main.css">
+
+  <script src="pause-video.js" defer></script>
 </head>
 
 <body>
@@ -29,9 +31,12 @@
 
     <!-- Hero -----------------------------------------------  -->
     <section class="hero" aria-labelledby="hero-heading">
-      <video class="hero-video" autoplay muted loop playsinline poster="orbit-poster.jpg">
+
+      <!-- data-video-toggle allows JS to loop over all video BG & toggle the pause function. -->
+      <video class="hero-video" data-video-toggle autoplay muted loop playsinline poster="orbit-poster.jpg">
         <source src="orbit-video.mp4" type="video/mp4">
       </video>
+      
       <div class="hero-content">
         <p class="eyebrow">Introducing Orbit v1.0</p>
         <h1 class="hero-heading">Building <em>accessibility</em> into every tab you open.</h1>
@@ -41,6 +46,12 @@
           <a class="btn primary" href="#">Try Now</a>
           <a class="btn ghost" href="#">Learn More</a>
         </div>
+
+        <!-- pause video BG (required by WCAG) -->
+        <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
+          <span aria-hidden="true">⏸</span>
+        </button>
+
       </div>
     </section>
 
@@ -165,7 +176,7 @@
     <!-- Research -----------------------------------------------  -->
     <section id="research" class="research" aria-labelledby="research-heading">
 
-      <video class="research-video" autoplay muted loop playsinline poster="research-poster.jpg">
+      <video class="research-video" data-video-toggle autoplay muted loop playsinline poster="research-poster.jpg">
         <source src="orbit-moon.mp4" type="video/mp4">
       </video>
 
@@ -179,9 +190,11 @@
             testing tools industry-wide, and pairs it with WCAG 2.x contrast math and The A11y Project's
             community-maintained checklist — so what you see in Orbit reflects established, peer-reviewed
             accessibility guidance.</p>
-          <!-- <a href="#" class="research-link">
-            Learn More<span class="sr-only"> about Orbit's Research</span>
-          </a> -->
+
+          <!-- pause video BG (required by WCAG) -->
+          <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
+            <span aria-hidden="true">⏸</span>
+          </button>
         </div>
 
         <nav class="research-nav" aria-label="Orbit something....">
@@ -233,7 +246,7 @@
 
         <li>
           <article aria-labelledby="item-1-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="phase-img">
             <div>
               <h3 id="item-1-title">Foundation (Shipped)</h3>
               <p>The core toolkit: automated axe-core scanning, a tab-order and high-contrast visualizer, a WCAG
@@ -248,7 +261,7 @@
 
         <li>
           <article aria-labelledby="item-2-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="phase-img">
             <div>
               <h3 id="item-2-title">Reporting</h3>
               <p>Exportable reports that clearly separate automated findings from manual checklist items, so teams
@@ -263,7 +276,7 @@
 
         <li>
           <article aria-labelledby="item-3-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="phase-img">
             <div>
               <h3 id="item-3-title">Cross-browser & Team Support</h3>
               <p>Bringing Orbit beyond Chrome (Firefox/Edge support) and adding team-facing features like shared scan

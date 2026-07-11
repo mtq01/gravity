@@ -84,7 +84,7 @@ main {
     align-items: center;
 }
 
-/* ++++++++++ cards ++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++ features ++++++++++++++++++++++++++++++++++++++++++ */
 
 .card {
     display: flex;
@@ -105,7 +105,7 @@ main {
 
 .card-img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
 }
 
 /* ++++++++++ research ++++++++++++++++++++++++++++++++++++++++++ */
@@ -194,6 +194,11 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.phase-img {
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
