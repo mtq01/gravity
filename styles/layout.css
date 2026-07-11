@@ -92,11 +92,14 @@ main {
 
 .features-card-container {
     padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .feature-cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-1);
 }
 
@@ -106,14 +109,9 @@ main {
     gap: var(--gap-1);
 }
 
-.feature-cards>li {
-    /* grow, shrink, base width */
-    flex: 1 1 200px;
-}
-
 .card-img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
 }
 
 /* ++++++++++ research ++++++++++++++++++++++++++++++++++++++++++ */
