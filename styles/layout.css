@@ -1,3 +1,16 @@
+/* ================================================================
+   BREAKPOINT SYSTEM (mobile-first, progressive enhancement)
+
+   base             phone portrait            — stacked, tightest spacing
+   landscape fix     short-height landscape    — fixes hero on rotated phones
+   30em  (~480px)   large phones / phone landscape — grid opens to 2 cols
+   48em  (~768px)   tablet portrait and up     — side-by-side layouts begin
+   64em  (~1024px)  desktop / tablet landscape — matches original base design exactly
+
+   Each tier only sets what's NEW at that width — everything else
+   carries forward from the previous tier via the cascade.
+   ================================================================ */
+
 /* ++++++++++ globals ++++++++++++++++++++++++++++++++++++++++++ */
 .max-w-1600 {
     max-width: 1600px;
@@ -15,7 +28,9 @@ main,
 /* ++++++++++ header ++++++++++++++++++++++++++++++++++++++++++ */
 
 header {
-    padding: 0.5rem 1.1rem;
+    /* vertical matches --space-xs exactly; 1.1rem horizontal is a
+       custom optical-alignment value, not on the spacing scale */
+    padding: var(--space-xs) 1.1rem;
 }
 
 /* header content */
@@ -28,6 +43,7 @@ header {
 
 .nav-list {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--gap-1);
 }
 
@@ -67,11 +83,12 @@ main {
 
 .tech {
     min-height: 15.625rem;
-    padding: var(--space-4xl);
+    padding: var(--space-lg);
 }
 
 .logo-list {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--gap-1);
 }
 
@@ -92,15 +109,15 @@ main {
 /* ++++++++++ features ++++++++++++++++++++++++++++++++++++++++++ */
 
 .features-card-container {
-    padding: 0 5rem;
+    padding: 0 var(--space-md);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--gap-1);
 }
 
 .feature-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--gap-1);
 }
 
@@ -142,9 +159,11 @@ main {
 
 .research-inner {
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     flex: 1;
-    padding: var(--space-4xl);
+    gap: var(--gap-2);
+    padding: var(--space-lg);
     z-index: 2;
 }
 
@@ -168,11 +187,11 @@ main {
 }
 
 .research-copy>p {
-    width: 50%;
+    width: 100%;
 }
 
 .research-nav {
-    flex: 0 0 40%;
+    flex: 1 1 100%;
 }
 
 .research-list {
@@ -188,7 +207,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--gap-2);
-    padding: 0 5rem;
+    padding: 0 var(--space-md);
 }
 
 .phase-list {
@@ -206,15 +225,15 @@ main {
 
 .phase-list article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     gap: var(--gap-1);
 }
 
 .phase-list article .phase-img {
-    flex: 0 0 50%;
+    flex: 1 1 100%;
     /* aspect-ratio needs an explicit width to calculate height from */
-    width: 50%;
+    width: 100%;
     aspect-ratio: 16/9;
 }
 
@@ -231,9 +250,10 @@ main {
 .methodology {
     min-height: 40.625rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: var(--gap-4);
-    padding: var(--space-4xl);
+    padding: var(--space-lg);
 }
 
 .methodology-inner {
@@ -248,6 +268,7 @@ main {
 
 .methodology-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: start;
     gap: var(--gap-1);
@@ -259,16 +280,119 @@ main {
 }
 
 .methodology-list-container {
-    flex: 0 0 50%;
+    flex: 1 1 100%;
 }
 
 /* ++++++++++ footer ++++++++++++++++++++++++++++++++++++++++++ */
 .footer-inner {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: var(--gap-1);
     padding: var(--space-md);
 }
 
+/* +++++++++++++++++++++++++++++++++++++++++
+              MEDIA QUERIES 
++++++++++++++++++++++++++++++++++++++++++ */
+
+/* short-height landscape phones */
+@media (orientation: landscape) and (max-height: 37.5em) {
+    .hero {
+        height: auto;
+        min-height: 20rem;
+        padding-block: var(--space-lg);
+    }
+}
+
+/* large phones & phone landscape*/
+@media (min-width: 30em) {
+
+    .tech {
+        padding: var(--space-xl);
+    }
+}
+
+/* feature-cards stack at this breakpoint (prevents them from lookin squished on edges */
+@media (min-width: 36.25em) {
+ 
+    .feature-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* tablet */
+@media (min-width: 48em) {
+
+    .features-card-container {
+        padding: 0 var(--space-xl);
+    }
+
+    .research-inner {
+        flex-direction: row;
+        padding: var(--space-xl);
+    }
+
+    .research-copy>p {
+        width: 50%;
+    }
+
+    .research-nav {
+        flex: 0 0 40%;
+    }
+
+    .phases {
+        padding: 0 var(--space-xl);
+    }
+
+    .phase-list article {
+        flex-direction: row;
+    }
+
+    .phase-list article .phase-img {
+        flex: 0 0 50%;
+        width: 50%;
+    }
+
+    .methodology {
+        flex-direction: row;
+        padding: var(--space-xl);
+    }
+
+    .methodology-container {
+        flex-direction: row;
+    }
+
+    .methodology-list-container {
+        flex: 0 0 50%;
+    }
+
+    .footer-inner {
+        flex-direction: row;
+    }
+}
+
 /* desktop */
-@media (min-width: 64em) {}
+@media (min-width: 64em) {
+
+    .tech {
+        padding: var(--space-4xl);
+    }
+
+    .features-card-container {
+        padding: 0 var(--gap-5);
+    }
+
+    .research-inner {
+        padding: var(--space-4xl);
+    }
+
+    .phases {
+        padding: 0 var(--gap-5);
+    }
+
+    .methodology {
+        padding: var(--space-4xl);
+    }
+}
