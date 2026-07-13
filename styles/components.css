@@ -248,25 +248,40 @@ header img {
 
 /* tablet */
 @media (min-width: 48em) {
-    .statement, .research-inner, .phases, .methodology {
+
+    .statement,
+    .research-inner,
+    .phases,
+    .methodology {
         padding: var(--space-xl);
     }
 
     .features-card-container {
         padding: 0 var(--space-xl);
     }
+
+    .footer-links {
+        display: flex;
+        gap: var(--gap-3);
+    }
 }
 
 /* desktop */
 @media (min-width: 64em) {
 
-    .features-card-container, .phases {
+    .features-card-container,
+    .phases {
         padding: 0 var(--gap-5);
     }
 
-    .research-inner, .statement, .methodology, .tech {
+    .research-inner,
+    .statement,
+    .methodology,
+    .tech {
         padding: var(--space-4xl);
     }
+
+
 
 }
 
