@@ -40,12 +40,6 @@ main {
     gap: var(--gap-4);
 }
 
-.hero::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-}
-
 .hero {
     position: relative;
     display: flex;
@@ -69,24 +63,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-/* ++++++++++ tech stack ++++++++++++++++++++++++++++++++++++++++++ */
-
-.tech {
-    min-height: 15.625rem;
-    padding: var(--space-lg);
-}
-
-.logo-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap-1);
-}
-
-.logo-list li {
-    padding: var(--space-md);
-}
-
 
 /* ++++++++++ statement ++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -124,12 +100,6 @@ main {
 }
 
 /* ++++++++++ research ++++++++++++++++++++++++++++++++++++++++++ */
-
-.research::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-}
 
 .research {
     min-height: 31.25rem;
@@ -241,11 +211,6 @@ main {
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
-.methodology::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-}
 
 .methodology {
     min-height: 40.625rem;

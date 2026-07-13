@@ -1,4 +1,4 @@
-/* global */
+/* ++++++++++ globals ++++++++++++++++++++++++++++++++++++++++++ */
 
 .video-toggle {
     background: transparent;
@@ -16,6 +16,14 @@
 
 .svg-icon {
     width: 3.125rem;
+}
+
+/* video overlay */
+.overlay::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: #000000bd;
 }
 
 /* ++++++++++ header ++++++++++++++++++++++++++++++++++++++++++ */
@@ -50,11 +58,6 @@ header img {
 }
 
 /* ++++++++++ hero ++++++++++++++++++++++++++++++++++++++++++ */
-
-/* hero: video overlay */
-.hero::before {
-    background: #000000bd;
-}
 
 .hero {
     border-radius: var(--radius-10);
@@ -107,7 +110,6 @@ header img {
 
 /* ++++++++++ tech stack ++++++++++++++++++++++++++++++++++++++++++ */
 
-
 .logo-list li {
     list-style-type: none;
     background: var(--color-bg-dark);
@@ -149,11 +151,6 @@ header img {
 
 /* ++++++++++ research ++++++++++++++++++++++++++++++++++++++++++ */
 
-/* video overlay */
-.research::before {
-    background: #000000bd;
-}
-
 .research {
     background: var(--color-bg-dark);
     color: var(--color-text-light);
@@ -186,8 +183,6 @@ header img {
     margin: var(--space-sm) 0;
 }
 
-
-
 /* ++++++++++ phases ++++++++++++++++++++++++++++++++++++++++++ */
 
 .phase-list {
@@ -199,10 +194,6 @@ header img {
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
-
-.methodology::before {
-    background: #000000bd;
-}
 
 .methodology {
     background: var(--color-bg-dark);

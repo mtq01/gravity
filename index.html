@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orbit Accessibility Assistant</title>
+  <title>Orbit</title>
   <link rel="stylesheet" href="./styles/main.css">
 
   <!-- Favicon -->
@@ -40,7 +40,7 @@
   <main id="main-content" class="max-w-1600" tabindex="-1">
 
     <!-- Hero -----------------------------------------------  -->
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero overlay" aria-labelledby="hero-heading">
 
       <!-- 'data-video-toggle' allows JS to loop over all video BG & toggle the pause function. -->
       <video class="hero-video" data-video-toggle autoplay muted loop playsinline poster="orbit-poster.jpg">
@@ -133,7 +133,7 @@
     </section>
 
     <!-- Research -----------------------------------------------  -->
-    <section id="research" class="research" aria-labelledby="research-heading">
+    <section id="research" class="research overlay" aria-labelledby="research-heading">
 
       <video class="research-video" data-video-toggle autoplay muted loop playsinline poster="research-poster.jpg">
         <source data-src="orbit-moon.mp4" type="video/mp4">
@@ -246,7 +246,7 @@
 
 
     <!-- Methodology -----------------------------------------------  -->
-    <section id="overview" class="methodology" aria-labelledby="methodology-heading">
+    <section id="overview" class="methodology overlay" aria-labelledby="methodology-heading">
 
       <video class="methodology-video" data-video-toggle autoplay muted loop playsinline
         poster="methodology-poster.jpg">
@@ -258,9 +258,9 @@
           Methodology
         </h2>
 
-        <p>Orbit automates what can be reliably automated, and is explicit about the rest. Automated tools like
+        <p>Orbit automates what can be reliably automated, and is transparent about the rest. Automated tools like
           axe-core are excellent at catching objective, rule-based violations, but a meaningful share of WCAG success
-          criteria require human judgment. Orbit is built around that line, not around pretending it doesn't exist.
+          criteria require human judgment. 
         </p>
 
         <div class="methodology-container">
