@@ -259,11 +259,6 @@ header img {
     .features-card-container {
         padding: 0 var(--space-xl);
     }
-
-    .footer-links {
-        display: flex;
-        gap: var(--gap-3);
-    }
 }
 
 /* desktop */
