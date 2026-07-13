@@ -1,16 +1,3 @@
-/* ================================================================
-   BREAKPOINT SYSTEM (mobile-first, progressive enhancement)
-
-   base             phone portrait            — stacked, tightest spacing
-   landscape fix     short-height landscape    — fixes hero on rotated phones
-   30em  (~480px)   large phones / phone landscape — grid opens to 2 cols
-   48em  (~768px)   tablet portrait and up     — side-by-side layouts begin
-   64em  (~1024px)  desktop / tablet landscape — matches original base design exactly
-
-   Each tier only sets what's NEW at that width — everything else
-   carries forward from the previous tier via the cascade.
-   ================================================================ */
-
 /* ++++++++++ globals ++++++++++++++++++++++++++++++++++++++++++ */
 .max-w-1600 {
     max-width: 1600px;
@@ -77,6 +64,11 @@ main {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
 }
 
 /* ++++++++++ tech stack ++++++++++++++++++++++++++++++++++++++++++ */
@@ -226,15 +218,22 @@ main {
 .phase-list article {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     gap: var(--gap-1);
 }
 
-.phase-list article .phase-img {
+.phase-img {
     flex: 1 1 100%;
     /* aspect-ratio needs an explicit width to calculate height from */
     width: 100%;
     aspect-ratio: 16/9;
+    height: auto;
+    object-fit: cover;
+}
+
+.phase-content {
+    flex: 1 1 60%;
 }
 
 .phase-date {
@@ -246,7 +245,11 @@ main {
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
-
+.methodology::before {
+        position: absolute;
+    inset: 0;
+    content: "";
+}
 .methodology {
     min-height: 40.625rem;
     display: flex;
@@ -254,14 +257,25 @@ main {
     align-items: center;
     gap: var(--gap-4);
     padding: var(--space-lg);
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .methodology-inner {
     display: flex;
     flex-direction: column;
     gap: var(--gap-3);
+    z-index: 1;
 }
-
+.methodology-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
 .methodology-inner p {
     font-size: var(--text-lg);
 }
@@ -316,7 +330,7 @@ main {
 
 /* feature-cards stack at this breakpoint (prevents them from lookin squished on edges */
 @media (min-width: 36.25em) {
- 
+
     .feature-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -353,6 +367,10 @@ main {
     .phase-list article .phase-img {
         flex: 0 0 50%;
         width: 50%;
+    }
+
+    .phase-list li:nth-child(even) article {
+        flex-direction: row-reverse;
     }
 
     .methodology {

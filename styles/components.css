@@ -11,21 +11,30 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 0 1rem;
+    padding: 0 var(--space-sm);
+}
+
+.svg-icon {
+    width: 3.125rem
 }
 
 /* ++++++++++ header ++++++++++++++++++++++++++++++++++++++++++ */
 
 .site-header {
     background: var(--color-bg);
+    padding: var(--space-sm);
 }
 
 /* logo */
 .logo {
-    font-size: var(--text-3xl);
-    font-weight: 700;
     text-decoration: none;
-    color: var(--color-bg-light);
+    width: 5rem;
+}
+
+/* removes descender gap underneath logo img, so everytying sits inline */
+.logo img,
+header img {
+    display: block;
 }
 
 /* nav links */
@@ -46,13 +55,11 @@
     color: var(--color-bg);
 }
 
-
-
 /* ++++++++++ hero ++++++++++++++++++++++++++++++++++++++++++ */
 
 /* hero: video overlay */
 .hero::before {
-    background: #0000007a;
+    background: #000000bd;
 }
 
 .hero {
@@ -66,12 +73,34 @@
 .hero-content {
     color: var(--color-bg);
     text-align: left;
+    padding: 0 var(--space-md);
+    /* ensures content stacks above the video */
     position: relative;
-    /* ensures it stacks above the video */
+    gap: var(--gap-2);
 }
 
-.hero-heading {
-    text-align: center;
+.actions {
+    display: flex;
+    gap: var(--gap-2);
+    /* justify-content: center; */
+}
+
+.btn-primary,
+.btn-ghost {
+    background: var(--color-text-light);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-5);
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: var(--text-lg);
+
+}
+
+.btn-primary:hover,
+.btn-ghost:hover {
+    background: var(--color-accent);
+    color: var(--color-text-light);
+    text-decoration: underline;
 }
 
 /* ++++++++++ tech stack ++++++++++++++++++++++++++++++++++++++++++ */
@@ -89,7 +118,7 @@
     background: var(--color-bg-dark);
     border-radius: var(--radius-10);
     color: var(--color-text-light);
-    padding: var(--space-4xl);
+    padding: var(--space-lg);
 }
 
 .quote {
@@ -120,7 +149,7 @@
 
 /* video overlay */
 .research::before {
-    background: #0000007a;
+    background: #000000bd;
 }
 
 .research {
@@ -129,16 +158,12 @@
     border-radius: var(--radius-10);
 }
 
-.research-video {
-    object-fit: cover;
-}
-
 .research-list {
     list-style-type: none;
 }
 
 .research-copy h2 {
-    font-size: 1.75rem;
+    font-size: var(--text-4xl);
 }
 
 .research-paragraph {
@@ -156,7 +181,7 @@
 }
 
 .research-list-links hr {
-    margin: 1rem 0;
+    margin: var(--space-sm) 0;
 }
 
 
@@ -172,6 +197,11 @@
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
+
+.methodology::before {
+    background: #000000bd;
+}
+
 .methodology {
     background: var(--color-bg-dark);
     color: var(--color-text-light);
@@ -200,7 +230,7 @@
 }
 
 .footer-logo {
-    color: white;
+    color: var(--color-text-light);
 }
 
 /* still marked temporary */
@@ -212,26 +242,27 @@
 
 
 
-/* ++++++++++ media queries ++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++
+            MEDIA QUERIES 
++++++++++++++++++++++++++++++++++++++++++ */
 
-/* Styles for screens 420px wide or larger */
 @media (min-width: 26.25em) {
     .card {
         min-width: 15rem;
     }
 }
 
-/* Styles for landscape mode */
-@media (orientation: landscape) and (max-height: 500px) {
-    .hero {
-        height: auto;
-        padding: 2rem 1rem;
+@media (min-width: 48em) {
+    .statement {
+        padding: var(--space-xl);
     }
 }
 
-@media (max-width: 48em) {}
-
-@media (max-width: 33.75em) {}
+@media (min-width: 64em) {
+    .statement {
+        padding: var(--space-4xl);
+    }
+}
 
 /* hero video */
 @media (prefers-reduced-motion: reduce) {
@@ -240,7 +271,7 @@
     }
 
     .hero {
-        background: var(--color-text);
         /* fallback to the solid color */
+        background: var(--color-text);
     }
 }

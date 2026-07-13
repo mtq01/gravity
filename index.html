@@ -7,6 +7,14 @@
   <title>Orbit Accessibility Assistant</title>
   <link rel="stylesheet" href="./styles/main.css">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Orbit" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <script src="pause-video.js" defer></script>
 </head>
 
@@ -16,7 +24,9 @@
 
   <header class="site-header max-w-1600" role="banner">
     <div class="header-inner">
-      <a class="logo" href="/" aria-label="Orbit — home">Orbit</a>
+      <a href="/" aria-label="Orbit — home">
+        <img class="logo" src="assets/icons/orbit-logo-blue.svg" alt="">
+      </a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul class="nav-list" role="list">
           <li><a class="nav-link" href="#overview" aria-current="page">Overview</a></li>
@@ -32,26 +42,24 @@
     <!-- Hero -----------------------------------------------  -->
     <section class="hero" aria-labelledby="hero-heading">
 
-      <!-- data-video-toggle allows JS to loop over all video BG & toggle the pause function. -->
+      <!-- 'data-video-toggle' allows JS to loop over all video BG & toggle the pause function. -->
       <video class="hero-video" data-video-toggle autoplay muted loop playsinline poster="orbit-poster.jpg">
-        <source src="orbit-video.mp4" type="video/mp4">
+        <source data-src="orbit-video.mp4" type="video/mp4">
       </video>
 
       <div class="hero-content">
-        <!-- <p class="eyebrow">Introducing Orbit v1.0</p> -->
         <h1 class="hero-heading">Building <em>accessibility</em> into every tab you open.</h1>
-        <p class="sub-head">Orbit catches what automated tools can catch and points you to what still needs the human
-          touch. Scan, visualize, and check contrast right in your browser.</p>
         <div class="actions">
-          <a class="btn primary" href="#">Try Orbit</a>
-          <a class="btn ghost" href="#">Discover Orbit</a>
+          <a class="btn-primary"
+            href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Extension</a>
+          <a class="btn-ghost" href="#features">Discover Orbit</a>
         </div>
-        
-        
+
+
       </div>
       <!-- pause video BG (required by WCAG) -->
       <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
-        <span aria-hidden="true">⏸</span>
+        <span aria-hidden="true"><img src="assets/icons/pause.svg" alt=""></span>
       </button>
     </section>
 
@@ -122,9 +130,7 @@
             <p>Real-time WCAG audits, powered by axe-core. Point it at any page and see every automatically-detectable
               violation, ranked by severity. Things like missing labels, low contrast, and invalid ARIA. This is a
               fast first pass, not a full audit.</p>
-            <div class="card-actions">
-              <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
-            </div>
+
           </article>
         </li>
 
@@ -133,11 +139,9 @@
             <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
             <h3 class="card-title">Tab Order & High Contrast</h3>
             <p>Some issues can't be scanned, only seen. A numbered overlay traces keyboard focus order across the
-              page, and high contrast mode previews low-vision rendering — surfacing the kind of problems no rules
+              page, and high contrast mode previews low-vision rendering, surfacing the kind of problems no rules
               engine catches.</p>
-            <div class="card-actions">
-              <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
-            </div>
+
           </article>
         </li>
 
@@ -145,11 +149,10 @@
           <article class="card" aria-labelledby="card-3-title">
             <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
             <h3 class="card-title">Color Contrast Checker</h3>
-            <p>Pick a foreground and background color and get an instant AA/AAA verdict against WCAG 2.x thresholds —
-              useful for validating a design decision before it ships.p>
-            <div class="card-actions">
-              <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
-            </div>
+            <p>Pick a foreground and background color and get an instant AA/AAA verdict against WCAG 2.2 thresholds,
+              useful for validating a design decision before it ships.
+            <p>
+
           </article>
         </li>
 
@@ -157,12 +160,9 @@
           <article class="card" aria-labelledby="card-4-title">
             <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
             <h3 class="card-title">A11y Project Checklist</h3>
-            <p>Automated scanning has real limits. This tab surfaces The A11y Project's community-maintained checklist
-              — the manual, human-judgment checks that fill in what axe-core can't see — with full credit and
-              attribution per their open license.</p>
-            <div class="card-actions">
-              <a href="#">Learn More<span class="sr-only"> about Version 1.0</span></a>
-            </div>
+            <p>Automated scanning has real limits. This tab surfaces The A11y Project's community-maintained checklist,
+              the manual, human-judgment checks that fill in what axe-core can't see.</p>
+
           </article>
         </li>
 
@@ -173,7 +173,7 @@
     <section id="research" class="research" aria-labelledby="research-heading">
 
       <video class="research-video" data-video-toggle autoplay muted loop playsinline poster="research-poster.jpg">
-        <source src="orbit-moon.mp4" type="video/mp4">
+        <source data-src="orbit-moon.mp4" type="video/mp4">
       </video>
 
       <div class="research-inner">
@@ -184,12 +184,12 @@
           <p class="research-paragraph">Orbit doesn't invent its own accessibility rules. It's built on axe-core, the
             same engine used by major
             testing tools industry-wide, and pairs it with WCAG 2.x contrast math and The A11y Project's
-            community-maintained checklist — so what you see in Orbit reflects established, peer-reviewed
+            community-maintained checklist, so what you see in Orbit reflects established, peer-reviewed
             accessibility guidance.</p>
 
           <!-- pause video BG (required by WCAG) -->
           <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
-            <span aria-hidden="true">⏸</span>
+            <span aria-hidden="true"><img src="assets/icons/pause.svg" alt=""></span>
           </button>
         </div>
 
@@ -203,7 +203,7 @@
                   <p>The open-source accessibility testing engine that powers Orbit's automated scans, built and
                     maintained by Deque Systems and used across the industry.</p>
                 </div>
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true"><img class="svg-icon" src="assets/icons/external-link.svg" alt=""></span>
               </a>
               <hr>
             </li>
@@ -214,7 +214,7 @@
                   <p>The Web Content Accessibility Guidelines. The official W3C standard that defines what "accessible"
                     means, and the benchmark Orbit's contrast checker and scanner test against.</p>
                 </div>
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true"><img class="svg-icon" src="assets/icons/external-link.svg" alt=""></span>
               </a>
               <hr>
             </li>
@@ -225,7 +225,7 @@
                   <p>A community-driven effort making web accessibility easier to understand, with practical resources
                     and the checklist that powers Orbit's manual audit tab.</p>
                 </div>
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true"><img class="svg-icon" src="assets/icons/external-link.svg" alt=""></span>
               </a>
             </li>
           </ul>
@@ -249,15 +249,13 @@
               <p>The core toolkit: automated axe-core scanning, a tab-order and high-contrast visualizer, a WCAG
                 contrast
                 checker, and The A11y Project's checklist — all built into a single Chrome extension.</p>
-              <a class="btn primary" href="#">
-                Learn More<span class="sr-only"> about Phase 1</span>
-              </a>
             </div>
           </article>
         </li>
 
         <li>
           <article aria-labelledby="item-2-title">
+            <img src="orbit-moon.jpg" alt="" class="phase-img">
             <div class="phase-content">
               <span class="phase-date">July 2026</span>
 
@@ -265,11 +263,7 @@
               <p>Exportable reports that clearly separate automated findings from manual checklist items, so teams
                 know
                 what's been verified and what still needs a human pass.</p>
-              <a class="btn primary" href="#">
-                Learn More<span class="sr-only"> about Phase 2</span>
-              </a>
             </div>
-            <img src="orbit-moon.jpg" alt="" class="phase-img">
           </article>
         </li>
 
@@ -282,9 +276,6 @@
               <h3 id="item-3-title">Cross-browser & Team Support</h3>
               <p>Bringing Orbit beyond Chrome (Firefox/Edge support) and adding team-facing features like shared scan
                 history or project-level tracking.</p>
-              <a class="btn primary" href="#">
-                Learn More<span class="sr-only"> about Phase 3</span>
-              </a>
             </div>
           </article>
         </li>
@@ -296,13 +287,18 @@
     <!-- Methodology -----------------------------------------------  -->
     <section id="overview" class="methodology" aria-labelledby="methodology-heading">
 
+      <video class="methodology-video" data-video-toggle autoplay muted loop playsinline
+        poster="methodology-poster.jpg">
+        <source data-src="orbit-research.mp4" type="video/mp4">
+      </video>
+
       <div class="methodology-inner">
         <h2 id="methodology-heading" class="methodology-label">
           Methodology
         </h2>
 
         <p>Orbit automates what can be reliably automated, and is explicit about the rest. Automated tools like
-          axe-core are excellent at catching objective, rule-based violations — but a meaningful share of WCAG success
+          axe-core are excellent at catching objective, rule-based violations, but a meaningful share of WCAG success
           criteria require human judgment. Orbit is built around that line, not around pretending it doesn't exist.
         </p>
 
@@ -324,7 +320,7 @@
 
           <!-- What is NOT Automated -->
           <div class="methodology-list-container">
-            <h3>What Isn't</h3>
+            <h3>What Needs a Human Touch</h3>
             <ul class="methodology-list" role="list">
               <li>Alt text accuracy and meaning, not just presence</li>
               <li>Logical reading order for screen reader users</li>
@@ -332,16 +328,18 @@
               <li>Clarity of error messages</li>
               <li>Content that makes sense out of visual context</li>
               <li>Intuitive interactions for screen reader and switch device users</li>
+              <li>No automated scanner, including Orbit, can verify these.</li>
             </ul>
           </div>
         </div>
 
-        <p>No automated scanner, including Orbit, can verify these. They require a human tester, ideally one using the
-          assitive technology in question.</p>
-
       </div>
-    </section>
 
+      <!-- pause video BG (required by WCAG) -->
+      <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
+        <span aria-hidden="true"><img src="assets/icons/pause.svg" alt=""></span>
+      </button>
+    </section>
 
   </main>
 
