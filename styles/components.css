@@ -25,12 +25,6 @@
     padding: var(--space-sm);
 }
 
-/* logo */
-.logo {
-    text-decoration: none;
-    width: 5rem;
-}
-
 /* removes descender gap underneath logo img, so everytying sits inline */
 .logo img,
 header img {
@@ -73,6 +67,7 @@ header img {
 .hero-sub {
     font-size: var(--text-2xl);
 }
+
 .hero-content {
     color: var(--color-bg);
     text-align: left;
@@ -249,26 +244,39 @@ header img {
 
 
 
-/* +++++++++++++++++++++++++++++++++++++++++
-            MEDIA QUERIES 
-+++++++++++++++++++++++++++++++++++++++++ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              MEDIA QUERIES 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* mobile */
 @media (min-width: 26.25em) {
     .card {
         min-width: 15rem;
     }
 }
 
+/* tablet */
 @media (min-width: 48em) {
-    .statement {
+    .statement, .research-inner, .phases, .methodology {
         padding: var(--space-xl);
+    }
+
+    .features-card-container {
+        padding: 0 var(--space-xl);
     }
 }
 
+/* desktop */
 @media (min-width: 64em) {
-    .statement {
+
+    .features-card-container, .phases {
+        padding: 0 var(--gap-5);
+    }
+
+    .research-inner, .statement, .methodology, .tech {
         padding: var(--space-4xl);
     }
+
 }
 
 /* hero video */

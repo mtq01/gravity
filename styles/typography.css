@@ -116,6 +116,6 @@ a:active {
     color: var(--color-text);
 }
 
-#logo {
-    height: 50px;
+.logo {
+    width: 5rem;
 }
