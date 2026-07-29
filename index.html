@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orbit</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <title>Gravity</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Orbit" />
+  <meta name="apple-mobile-web-app-title" content="Gravity" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <script src="pause-video.js" defer></script>
+  <script src="assets/scripts/pause-video.js" defer></script>
 </head>
 
 <body>
@@ -24,14 +24,14 @@
 
   <header class="site-header max-w-1600" role="banner">
     <div class="header-inner">
-      <a href="/" aria-label="Orbit — home">
-        <img class="logo" src="assets/icons/orbit-logo-blue.svg" alt="">
+      <a href="/" class="logo" aria-label="Gravity — home">
+        gravity
       </a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul class="nav-list" role="list">
-          <li><a class="nav-link" href="#overview" aria-current="page">Overview</a></li>
-          <li><a class="nav-link" href="#features">Features</a></li>
-          <li><a class="nav-link" href="#research">About</a></li>
+          <li><a class="nav-link" href="#gravity-values" aria-current="page">Overview</a></li>
+          <li><a class="nav-link" href="#orbit-extension">Tools</a></li>
+          <li><a class="nav-link" href="#timeline">Timeline</a></li>
         </ul>
       </nav>
     </div>
@@ -43,21 +43,22 @@
     <section class="hero overlay" aria-labelledby="hero-heading">
 
       <!-- 'data-video-toggle' allows JS to loop over all video BG & toggle the pause function. -->
-      <video class="hero-video" data-video-toggle autoplay muted loop playsinline poster="orbit-poster.jpg">
-        <source data-src="orbit-video.mp4" type="video/mp4">
+      <video class="hero-video" data-video-toggle autoplay muted loop playsinline poster="assets/images/orbit-moon.jpg">
+        <source data-src="assets/videos/orbit-video.mp4" type="video/mp4">
       </video>
 
       <div class="hero-content">
-        <h1 class="hero-heading"><em>Accessibility</em> checks, built into every tab you open.</h1>
-        <p class="hero-sub">Your first step toward a more accessible experience. </p>
+        <h1 class="hero-heading">Built on open standards, <em>not guesswork.</em></h1>
+        <p class="hero-sub">A small team building tools that are honest about what they do, and what they dont.</p>
         <div class="actions">
           <a class="btn-primary" target="_blank"
-            href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Extension
+            href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Orbit
+            Extension
             <!-- WCAG AAA: external links should provide context -->
-             <img class="external-link-icon" src="assets/icons/external-link.svg" alt="">
-          <span class="sr-only"> (opens in a new tab)</span>
-        </a>
-          <a class="btn-ghost" href="#features">Discover Orbit</a>
+            <img class="external-link-icon" src="assets/icons/external-link.svg" alt="">
+            <span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="btn-ghost" href="#orbit-extension">Learn About Orbit</a>
         </div>
 
 
@@ -69,62 +70,66 @@
     </section>
 
 
-    <!-- Statement -->
-    <section class="statement" aria-labelledby="statement-heading">
-      <h2 id="statement-heading" class="sr-only">What Orbit is Built With</h2>
-      <blockquote class="quote" cite="https://gravity.ai/about">
-        Orbit catches real, fixable issues
-        fast, but it can't tell you if your alt text actually makes sense, or if your interface is genuinely usable
-        with a screen reader.
-      </blockquote>
-    </section>
+
+
+
+
+
+
+
+
 
     <!-- Features -----------------------------------------------  -->
-    <section id="features" class="features-card-container" aria-labelledby="models-heading">
-      <h2 class="feature-heading">Features</h2>
+    <section id="gravity-values" class="features-card-container" aria-labelledby="models-heading">
+      <h2 class="feature-heading">Solutions That Truly <em>Matter</em></h2>
 
       <!-- collection of related items grouped in UL (semantic) -->
       <ul class="feature-cards" role="list">
 
         <li>
           <article class="card" aria-labelledby="card-1-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-            <h3 class="card-title">Automated Violation Scanning</h3>
-            <p>Real-time WCAG audits, powered by axe-core. Point it at any page and see every automatically-detectable
-              violation, ranked by severity. Things like missing labels, low contrast, and invalid ARIA. This is a
-              fast first pass, not a full audit.</p>
+            <img src="assets/images/orbit-foundation.jpg" alt="" class="card-img">
+
+            <h3 class="card-title">Solving Real Problems</h3>
+            <p>We build to solve problems people actually run into, not proof-of-concepts to chase the latest trend. If
+              it doesn't hold up outside the pitch deck, it doesnt get shipped.</p>
 
           </article>
         </li>
 
         <li>
           <article class="card" aria-labelledby="card-2-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-            <h3 class="card-title">Tab Order & High Contrast</h3>
-            <p>Some issues can't be scanned, only seen. A numbered overlay traces keyboard focus order across the
-              page, and high contrast mode previews low-vision rendering, surfacing the kind of problems no rules
-              engine catches.</p>
+            <img src="assets/images/orbit-moon.jpg" alt="" class="card-img">
+
+            <h3 class="card-title">Real Value</h3>
+
+            <p>A tool earns its place by saving real time or preventing real mistakes. The goal is to build tools that
+              genuinely improves your day-to-day.</p>
+
 
           </article>
         </li>
 
         <li>
           <article class="card" aria-labelledby="card-3-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-            <h3 class="card-title">Color Contrast Checker</h3>
-            <p>Pick a foreground and background color and get an instant AA/AAA verdict against WCAG 2.2 thresholds,
-              useful for validating a design decision before it ships.
-            <p>
+            <img src="assets/images/orbit-radar.jpg" alt="" class="card-img">
+
+            <h3 class="card-title">Honesty Matters</h3>
+
+            <p>Every tool has limits. We'd rather tell you what ours are capable of up front rather than let you find
+              out the hard way. Otherwise, we would be just like everyone else when our goal is to stand out.</p>
 
           </article>
         </li>
 
         <li>
-          <article class="card" aria-labelledby="card-4-title">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="" class="card-img">
-            <h3 class="card-title">A11y Project Checklist</h3>
-            <p>Automated scanning has real limits. This tab surfaces The A11y Project's community-maintained checklist,
-              the manual, human-judgment checks that fill in what axe-core can't see.</p>
+          <article class="card" aria-labelledby="card-3-title">
+            <img src="assets/images/orbit-radar.jpg" alt="" class="card-img">
+
+            <h3 class="card-title">Accountability, not just Automation</h3>
+
+            <p>Automation is great, but its only worth trusting if you can see what it does and why. We build our tools
+              to show you the how, and the why, instead of just handing you the answer.</p>
 
           </article>
         </li>
@@ -132,23 +137,44 @@
       </ul>
     </section>
 
-    <!-- Research -----------------------------------------------  -->
-    <section id="research" class="research overlay" aria-labelledby="research-heading">
 
-      <video class="research-video" data-video-toggle autoplay muted loop playsinline poster="research-poster.jpg">
-        <source data-src="orbit-moon.mp4" type="video/mp4">
+
+
+
+
+
+
+
+
+
+    <!-- ORBIT Research -----------------------------------------------  -->
+    <section id="orbit-extension" class="research overlay" aria-labelledby="research-heading">
+
+      <video class="research-video" data-video-toggle autoplay muted loop playsinline poster="assets/images/moon.jpg">
+        <source data-src="assets/videos/orbit-moon.mp4" type="video/mp4">
       </video>
 
       <div class="research-inner">
 
         <div class="research-copy">
-          <p>About Orbit</p>
-          <h2>Built on open standards, not guesswork.</h2>
-          <p class="research-paragraph">Orbit doesn't invent its own accessibility rules. It's built on axe-core, the
+          <h2 id="research-heading">Discover Orbit</h2>
+          <p class="research-paragraph">We didn't invent our own accessibility rules. Orbit is built on axe-core, the
             same engine used by major
             testing tools industry-wide, and pairs it with WCAG 2.x contrast math and The A11y Project's
             community-maintained checklist, so what you see in Orbit reflects established, peer-reviewed
             accessibility guidance.</p>
+
+
+          <div class="actions">
+            <a class="btn-primary" target="_blank"
+              href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Orbit
+              Extension
+              <!-- WCAG AAA: external links should provide context -->
+              <img class="external-link-icon" src="assets/icons/external-link.svg" alt="">
+              <span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+
 
           <!-- pause video BG (required by WCAG) -->
           <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
@@ -160,7 +186,7 @@
           <ul class="research-list" role="list">
 
             <li class="research-list-links">
-              <a href="#">
+              <a href="https://www.deque.com/axe/core-documentation/api-documentation/" target="_blank">
                 <div class="research-link-content">
                   <h3>Axe-core</h3>
                   <p>The open-source accessibility testing engine that powers Orbit's automated scans, built and
@@ -171,7 +197,7 @@
               <hr>
             </li>
             <li class="research-list-links">
-              <a href="#">
+              <a href="https://www.w3.org/TR/WCAG21/" target="_blank">
                 <div class="research-link-content">
                   <h3>WCAG Guidelines</h3>
                   <p>The Web Content Accessibility Guidelines. The official W3C standard that defines what "accessible"
@@ -182,7 +208,7 @@
               <hr>
             </li>
             <li class="research-list-links">
-              <a href="#">
+              <a href="https://www.a11yproject.com/checklist/" target="_blank">
                 <div class="research-link-content">
                   <h3>The A11y Project</h3>
                   <p>A community-driven effort making web accessibility easier to understand, with practical resources
@@ -197,60 +223,36 @@
       </div>
     </section>
 
-    <!-- Phases -----------------------------------------------  -->
-    <section class="phases" aria-labelledby="products-heading">
 
-      <h2>What's next for Orbit</h2>
-      <ul class="phase-list" role="list">
 
-        <li>
-          <article aria-labelledby="item-1-title">
-            <img src="orbit-foundation.jpg" alt="" class="phase-img">
-            <div class="phase-content">
-              <span class="phase-date">July 2026</span>
-              <h3 id="item-1-title">Version 1</h3>
-              <p>The core toolkit. Including automated axe-core scanning, a tab-order and high-contrast visualizer, a WCAG
-                contrast checker, and The A11y Project's checklist, all built into a single Chrome extension.</p>
-            </div>
-          </article>
-        </li>
 
-        <li>
-          <article aria-labelledby="item-2-title">
-            <img src="orbit-moon.jpg" alt="" class="phase-img">
-            <div class="phase-content">
-              <span class="phase-date">July 2026</span>
+    <!-- ORBIT Statement -->
+    <section class="statement" aria-labelledby="statement-heading">
+      <h2 id="statement-heading" class="sr-only">Say Hello to Orbit</h2>
+      <blockquote class="quote" cite="/">
+        <em>Accessibility</em> checks, built into every tab you open.
+      </blockquote>
 
-              <h3 id="item-2-title">Reporting</h3>
-              <p>Exportable reports that clearly separate automated findings from manual checklist items, so teams
-                know what's been verified and what still needs a human pass.</p>
-            </div>
-          </article>
-        </li>
-
-        <li>
-          <article aria-labelledby="item-3-title">
-            <img src="orbit-radar.jpg" alt="" class="phase-img">
-            <div class="phase-content">
-              <span class="phase-date">August 2026</span>
-
-              <h3 id="item-2-title">Reporting</h3>
-              <p>Exportable reports that clearly separate automated findings from manual checklist items, so you
-                know what's been verified and what still needs a human pass.</p>
-            </div>
-          </article>
-        </li>
-
-      </ul>
+      <div class="actions">
+        <a class="btn-primary" target="_blank"
+          href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Orbit
+          Extension
+          <!-- WCAG AAA: external links should provide context -->
+          <img class="external-link-icon" src="assets/icons/external-link.svg" alt="">
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
     </section>
 
 
-    <!-- Methodology -----------------------------------------------  -->
-    <section id="overview" class="methodology overlay" aria-labelledby="methodology-heading">
+
+
+    <!-- ORBIT Methodology -----------------------------------------------  -->
+    <section class="methodology overlay" aria-labelledby="methodology-heading">
 
       <video class="methodology-video" data-video-toggle autoplay muted loop playsinline
-        poster="methodology-poster.jpg">
-        <source data-src="orbit-research.mp4" type="video/mp4">
+        poster="assets/images/orbit-moon.jpg">
+        <source data-src="assets/videos/orbit-research.mp4" type="video/mp4">
       </video>
 
       <div class="methodology-inner">
@@ -260,7 +262,7 @@
 
         <p>Orbit automates what can be reliably automated, and is transparent about the rest. Automated tools like
           axe-core are excellent at catching objective, rule-based violations, but a meaningful share of WCAG success
-          criteria require human judgment. 
+          criteria require human judgment.
         </p>
 
         <div class="methodology-container">
@@ -302,21 +304,99 @@
       </button>
     </section>
 
+
+
+
+
+
+    <!-- Phases -----------------------------------------------  -->
+    <section id="timeline" class="phases" aria-labelledby="products-heading">
+
+      <h2>What's next for Gravity</h2>
+      <ul class="phase-list" role="list">
+
+        <li>
+          <article aria-labelledby="item-1-title">
+            <img src="assets/images/orbit-foundation.jpg" alt="" class="phase-img">
+            <div class="phase-content">
+              <span class="phase-date">July 2026</span>
+              <h3 id="item-1-title">Orbit</h3>
+              <p>Lightweight accessibility assistant. Runs right it your browser, scans the current page and flags
+                violations by severity. It doesn't fix issues or certify compliance, its a starting point that finds the
+                lowest hanging fruit before you do a manual review.</p>
+
+              <div>
+                <a href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco"
+                  target="_blank" rel="noopener noreferrer">Download the Orbit Chrome Extension
+                  <!-- WCAG AAA: external links should provide context -->
+                  <img class="external-link-icon" src="assets/icons/external-link-dark.svg" alt="">
+                  <span class="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
+
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article aria-labelledby="item-2-title">
+            <img src="assets/images/orbit-moon.jpg" alt="" class="phase-img">
+            <div class="phase-content">
+              <span class="phase-date">August 2026</span>
+
+              <h3 id="item-2-title">Radar</h3>
+              <p>Radar looks for accessibility problems on any website you paste into the search bar. It scans the page,
+                shows you what's wrong, and explains each issue in plain English. It doesn't fix problems or guarantee
+                compliance, it points out where each issue lives on the page and gives you a prompt you can hand to a
+                developer or AI tool for review</p>
+
+              <div>
+                <a href="https://radar.gogogravity.com" target="_blank" rel="noopener noreferrer">Try Radar Today!
+                  <!-- WCAG AAA: external links should provide context -->
+                  <img class="external-link-icon" src="assets/icons/external-link-dark.svg" alt="">
+                  <span class="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
+
+            </div>
+          </article>
+        </li>
+
+
+        <li>
+          <article aria-labelledby="item-1-title">
+            <img src="assets/images/orbit-radar.jpg" alt="" class="phase-img">
+            <div class="phase-content">
+              <span class="phase-date">September 2026</span>
+              <h3 id="item-1-title">Apollo</h3>
+              <p>Built to solve the pain points that make traditional Enterprise Resource Planning software feel broken.
+                Role-based login shows each buyer their own account-specific pricing, stock, and warehouse access. Smart
+                parsing turns messy SKUs and old invoices into accurate quotes instantly. Buyers reorder straight from
+                purchase history or paste in SKUs, and activity logs give full visibility into what's happening behind
+                the scenes.</p>
+
+            </div>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+
+
   </main>
 
   <!-- footer ----------------------------------------------- -->
   <footer class="site-footer" role="contentinfo">
     <div class="max-w-1600">
       <div class="footer-inner">
-        <a class="footer-logo" href="/" aria-label="Orbit — home"><img class="logo" src="assets/icons/orbit-logo-white.svg" alt=""></a>
+        <a href="/" class="logo footer-logo" aria-label="Orbit — home">gravity</a>
         <nav class="footer-nav" aria-label="Footer navigation">
           <ul class="footer-links" role="list">
-            <li><a href="#">Privacy</a></li>
+            <li class="copyright">© 2026 – Gravity</li>
           </ul>
         </nav>
       </div>
     </div>
-    <p class="copyright"><small>© 2026 Orbit</small></p>
   </footer>
 
 </body>

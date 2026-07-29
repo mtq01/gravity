@@ -29,7 +29,7 @@ clamp(min, preferred, max)
     --text-2xl: clamp(1.25rem, 4vw + 0.5rem, 1.5rem);
     --text-3xl: clamp(1.5rem, 4.5vw + 0.75rem, 1.875rem);
     --text-4xl: clamp(1.75rem, 4.75vw + 0.75rem, 2.25rem);
-    --text-hero-h1: clamp(2rem, 5vw + 1rem, 4rem);
+    --text-5xl: clamp(2rem, 5vw + 1rem, 4rem);
 
     /* +++++ spacing +++++ */
     --space-xxs: 0.25rem;
@@ -48,6 +48,7 @@ clamp(min, preferred, max)
     --gap-3: 3rem;
     --gap-4: 4rem;
     --gap-5: 5rem;
+    --gap-15: 15rem;
 
 
     /* +++++ nav link +++++ */

@@ -33,10 +33,12 @@
     padding: var(--space-sm);
 }
 
-/* removes descender gap underneath logo img, so everytying sits inline */
-.logo img,
-header img {
-    display: block;
+.logo {
+    font-family: var(--font-body);
+    font-size: var(--text-3xl);
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 800;
 }
 
 /* nav links */
@@ -119,15 +121,21 @@ header img {
 
 /* ++++++++++ statement ++++++++++++++++++++++++++++++++++++++++++ */
 .statement {
-    background: var(--color-bg-dark);
+    background: var(--color-bg-light);
     border-radius: var(--radius-10);
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     padding: var(--space-lg);
+    border: 2px solid var(--color-bg-dark);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3)
+    
 }
 
 .quote {
-    font-size: var(--text-4xl);
+    font-size: var(--text-5xl);
     text-align: center;
+    line-height: var(--leading-tight);
 }
 
 /* ++++++++++ features ++++++++++++++++++++++++++++++++++++++++++ */
@@ -217,20 +225,11 @@ header img {
     text-decoration: none;
 }
 
-.footer-links a:hover,
-.footer-logo:hover {
-    text-decoration: underline;
-}
-
-.footer-logo {
-    color: var(--color-text-light);
-}
-
 /* still marked temporary */
 .copyright {
     text-align: center;
     color: var(--color-text-light);
-    font-size: var(--text-lg);
+    font-size: var(--text-sm);
 }
 
 
@@ -266,7 +265,7 @@ header img {
 
     .features-card-container,
     .phases {
-        padding: 0 var(--gap-5);
+        padding: 0 var(--gap-2);
     }
 
     .research-inner,
