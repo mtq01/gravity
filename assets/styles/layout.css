@@ -74,19 +74,20 @@ main {
     align-items: center;
 }
 
-/* ++++++++++ features ++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++ solutions ++++++++++++++++++++++++++++++++++++++++++ */
 
-.features-card-container {
+.solution-card-container {
     padding: 0 var(--space-md);
     display: flex;
     flex-direction: column;
     gap: var(--gap-1);
 }
 
-.feature-cards {
+.solution-cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap-5) var(--gap-3);
+    list-style-type: none;
 }
 
 .card {
@@ -162,54 +163,6 @@ main {
     gap: var(--gap-2);
 }
 
-/* ++++++++++ phases ++++++++++++++++++++++++++++++++++++++++++ */
-
-.phases {
-    min-height: 31.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-2);
-    padding: 0 var(--space-md);
-}
-
-.phase-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-5);
-}
-
-.phase-content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-1);
-    justify-content: center;
-    /* flex: 1 1 100%; */
-}
-
-.phase-list article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: var(--gap-3);
-}
-
-.phase-img {
-    /* aspect-ratio needs an explicit width to calculate height from */
-    width: 100%;
-    aspect-ratio: 16/9;
-    flex: 1 1 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.phase-date {
-    padding: var(--space-xxs) var(--space-sm);
-    background: var(--color-bg-dark);
-    color: var(--color-text-light);
-    width: fit-content;
-    border-radius: var(--radius-5);
-}
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -296,11 +249,11 @@ main {
     }
 }
 
-/* feature-cards stack at this breakpoint (prevents horizontal overflow issue) */
-@media (min-width: 36.25em) {
+/* solution-cards stack at this breakpoint (prevents horizontal overflow issue) */
+@media (min-width: 71.75em) {
 
-    .feature-cards {
-        grid-template-columns: repeat(2, 1fr);
+    .solution-cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -308,7 +261,6 @@ main {
 @media (min-width: 48em) {
 
     .research-inner,
-    .phase-list article,
     .methodology,
     .methodology-container,
     .footer-inner {
@@ -323,14 +275,6 @@ main {
         flex: 0 0 40%;
     }
 
-    .phase-list article .phase-img {
-        flex: 0 0 50%;
-        width: 50%;
-    }
-
-    .phase-list li:nth-child(even) article {
-        flex-direction: row-reverse;
-    }
 
     .methodology-list-container {
         flex: 0 0 50%;

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gravity</title>
+  <title>Home | Gravity</title>
   <link rel="stylesheet" href="assets/styles/main.css">
 
   <!-- Favicon -->
@@ -29,9 +29,9 @@
       </a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul class="nav-list" role="list">
-          <li><a class="nav-link" href="#gravity-values" aria-current="page">Overview</a></li>
-          <li><a class="nav-link" href="#orbit-extension">Tools</a></li>
-          <li><a class="nav-link" href="#timeline">Timeline</a></li>
+          <li><a class="nav-link" href="#gravity-tools" aria-current="page">Tools</a></li>
+          <li><a class="nav-link" href="/orbit.html" aria-current="page">Orbit</a></li>
+          <li><a class="nav-link" href="https://radar.gogogravity.com" target="_blank" aria-current="page">Radar</a></li>
         </ul>
       </nav>
     </div>
@@ -51,14 +51,7 @@
         <h1 class="hero-heading">Built on open standards, <em>not guesswork.</em></h1>
         <p class="hero-sub">A small team building tools that are honest about what they do, and what they dont.</p>
         <div class="actions">
-          <a class="btn-primary" target="_blank"
-            href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Orbit
-            Extension
-            <!-- WCAG AAA: external links should provide context -->
-            <img class="external-link-icon" src="assets/icons/external-link.svg" alt="">
-            <span class="sr-only"> (opens in a new tab)</span>
-          </a>
-          <a class="btn-ghost" href="#orbit-extension">Learn About Orbit</a>
+          <a class="btn-ghost" href="#gravity-tools">View Gravity Tools</a>
         </div>
 
 
@@ -79,245 +72,17 @@
 
 
 
-    <!-- Features -----------------------------------------------  -->
-    <section id="gravity-values" class="features-card-container" aria-labelledby="models-heading">
-      <h2 class="feature-heading">Solutions That Truly <em>Matter</em></h2>
+    <!-- Solutions -----------------------------------------------  -->
+    <section id="gravity-tools" class="solution-card-container" aria-labelledby="models-heading">
+      <h2 class="solution-heading">Solutions That Truly <em>Matter</em></h2>
 
       <!-- collection of related items grouped in UL (semantic) -->
-      <ul class="feature-cards" role="list">
+      <ul class="solution-cards" role="list">
 
         <li>
           <article class="card" aria-labelledby="card-1-title">
-            <img src="assets/images/orbit-foundation.jpg" alt="" class="card-img">
+            <img src="assets/images/orbit-card.avif" alt="" class="card-img">
 
-            <h3 class="card-title">Solving Real Problems</h3>
-            <p>We build to solve problems people actually run into, not proof-of-concepts to chase the latest trend. If
-              it doesn't hold up outside the pitch deck, it doesnt get shipped.</p>
-
-          </article>
-        </li>
-
-        <li>
-          <article class="card" aria-labelledby="card-2-title">
-            <img src="assets/images/orbit-moon.jpg" alt="" class="card-img">
-
-            <h3 class="card-title">Real Value</h3>
-
-            <p>A tool earns its place by saving real time or preventing real mistakes. The goal is to build tools that
-              genuinely improves your day-to-day.</p>
-
-
-          </article>
-        </li>
-
-        <li>
-          <article class="card" aria-labelledby="card-3-title">
-            <img src="assets/images/orbit-radar.jpg" alt="" class="card-img">
-
-            <h3 class="card-title">Honesty Matters</h3>
-
-            <p>Every tool has limits. We'd rather tell you what ours are capable of up front rather than let you find
-              out the hard way. Otherwise, we would be just like everyone else when our goal is to stand out.</p>
-
-          </article>
-        </li>
-
-        <li>
-          <article class="card" aria-labelledby="card-3-title">
-            <img src="assets/images/orbit-radar.jpg" alt="" class="card-img">
-
-            <h3 class="card-title">Accountability, not just Automation</h3>
-
-            <p>Automation is great, but its only worth trusting if you can see what it does and why. We build our tools
-              to show you the how, and the why, instead of just handing you the answer.</p>
-
-          </article>
-        </li>
-
-      </ul>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ORBIT Research -----------------------------------------------  -->
-    <section id="orbit-extension" class="research overlay" aria-labelledby="research-heading">
-
-      <video class="research-video" data-video-toggle autoplay muted loop playsinline poster="assets/images/moon.jpg">
-        <source data-src="assets/videos/orbit-moon.mp4" type="video/mp4">
-      </video>
-
-      <div class="research-inner">
-
-        <div class="research-copy">
-          <h2 id="research-heading">Discover Orbit</h2>
-          <p class="research-paragraph">We didn't invent our own accessibility rules. Orbit is built on axe-core, the
-            same engine used by major
-            testing tools industry-wide, and pairs it with WCAG 2.x contrast math and The A11y Project's
-            community-maintained checklist, so what you see in Orbit reflects established, peer-reviewed
-            accessibility guidance.</p>
-
-
-          <div class="actions">
-            <a class="btn-primary" target="_blank"
-              href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Orbit
-              Extension
-              <!-- WCAG AAA: external links should provide context -->
-              <img class="external-link-icon" src="assets/icons/external-link.svg" alt="">
-              <span class="sr-only"> (opens in a new tab)</span>
-            </a>
-          </div>
-
-
-          <!-- pause video BG (required by WCAG) -->
-          <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
-            <span aria-hidden="true"><img src="assets/icons/pause.svg" alt=""></span>
-          </button>
-        </div>
-
-        <nav class="research-nav" aria-label="Orbit something....">
-          <ul class="research-list" role="list">
-
-            <li class="research-list-links">
-              <a href="https://www.deque.com/axe/core-documentation/api-documentation/" target="_blank">
-                <div class="research-link-content">
-                  <h3>Axe-core</h3>
-                  <p>The open-source accessibility testing engine that powers Orbit's automated scans, built and
-                    maintained by Deque Systems and used across the industry.</p>
-                </div>
-                <span aria-hidden="true"><img class="svg-icon" src="assets/icons/external-link.svg" alt=""></span>
-              </a>
-              <hr>
-            </li>
-            <li class="research-list-links">
-              <a href="https://www.w3.org/TR/WCAG21/" target="_blank">
-                <div class="research-link-content">
-                  <h3>WCAG Guidelines</h3>
-                  <p>The Web Content Accessibility Guidelines. The official W3C standard that defines what "accessible"
-                    means, and the benchmark Orbit's contrast checker and scanner test against.</p>
-                </div>
-                <span aria-hidden="true"><img class="svg-icon" src="assets/icons/external-link.svg" alt=""></span>
-              </a>
-              <hr>
-            </li>
-            <li class="research-list-links">
-              <a href="https://www.a11yproject.com/checklist/" target="_blank">
-                <div class="research-link-content">
-                  <h3>The A11y Project</h3>
-                  <p>A community-driven effort making web accessibility easier to understand, with practical resources
-                    and the checklist that powers Orbit's manual audit tab.</p>
-                </div>
-                <span aria-hidden="true"><img class="svg-icon" src="assets/icons/external-link.svg" alt=""></span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
-    </section>
-
-
-
-
-    <!-- ORBIT Statement -->
-    <section class="statement" aria-labelledby="statement-heading">
-      <h2 id="statement-heading" class="sr-only">Say Hello to Orbit</h2>
-      <blockquote class="quote" cite="/">
-        <em>Accessibility</em> checks, built into every tab you open.
-      </blockquote>
-
-      <div class="actions">
-        <a class="btn-primary" target="_blank"
-          href="https://chromewebstore.google.com/detail/orbit/nflfajnljpdmndndfeeaagljhgjailco">Get The Orbit
-          Extension
-          <!-- WCAG AAA: external links should provide context -->
-          <img class="external-link-icon" src="assets/icons/external-link.svg" alt="">
-          <span class="sr-only"> (opens in a new tab)</span>
-        </a>
-      </div>
-    </section>
-
-
-
-
-    <!-- ORBIT Methodology -----------------------------------------------  -->
-    <section class="methodology overlay" aria-labelledby="methodology-heading">
-
-      <video class="methodology-video" data-video-toggle autoplay muted loop playsinline
-        poster="assets/images/orbit-moon.jpg">
-        <source data-src="assets/videos/orbit-research.mp4" type="video/mp4">
-      </video>
-
-      <div class="methodology-inner">
-        <h2 id="methodology-heading" class="methodology-label">
-          Methodology
-        </h2>
-
-        <p>Orbit automates what can be reliably automated, and is transparent about the rest. Automated tools like
-          axe-core are excellent at catching objective, rule-based violations, but a meaningful share of WCAG success
-          criteria require human judgment.
-        </p>
-
-        <div class="methodology-container">
-          <div class="methodology-list-container">
-            <!-- What's Automated -->
-            <h3>What's Automated</h3>
-            <ul class="methodology-list" role="list">
-              <li>Missing or empty alt attributes</li>
-              <li>Insufficient color contrast ratios</li>
-              <li>Missing form labels</li>
-              <li>Invalid or misused ARIA attributes</li>
-              <li>Missing document landmarks</li>
-              <li>Duplicate IDs</li>
-              <li>Missing page language attributes</li>
-              <li>Heading structure issues (ex. skipped levels)</li>
-            </ul>
-          </div>
-
-          <!-- What is NOT Automated -->
-          <div class="methodology-list-container">
-            <h3>What Needs a Human Touch</h3>
-            <ul class="methodology-list" role="list">
-              <li>Alt text accuracy and meaning, not just presence</li>
-              <li>Logical reading order for screen reader users</li>
-              <li>True keyboard operability of custom widgets</li>
-              <li>Clarity of error messages</li>
-              <li>Content that makes sense out of visual context</li>
-              <li>Intuitive interactions for screen reader and switch device users</li>
-              <li>No automated scanner, including Orbit, can verify these.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- pause video BG (required by WCAG) -->
-      <button class="video-toggle" aria-pressed="false" aria-label="Pause background video">
-        <span aria-hidden="true"><img src="assets/icons/pause.svg" alt=""></span>
-      </button>
-    </section>
-
-
-
-
-
-
-    <!-- Phases -----------------------------------------------  -->
-    <section id="timeline" class="phases" aria-labelledby="products-heading">
-
-      <h2>What's next for Gravity</h2>
-      <ul class="phase-list" role="list">
-
-        <li>
-          <article aria-labelledby="item-1-title">
-            <img src="assets/images/orbit-foundation.jpg" alt="" class="phase-img">
             <div class="phase-content">
               <span class="phase-date">July 2026</span>
               <h3 id="item-1-title">Orbit</h3>
@@ -335,37 +100,39 @@
               </div>
 
             </div>
+
           </article>
         </li>
 
         <li>
-          <article aria-labelledby="item-2-title">
-            <img src="assets/images/orbit-moon.jpg" alt="" class="phase-img">
-            <div class="phase-content">
-              <span class="phase-date">August 2026</span>
+          <article class="card" aria-labelledby="card-2-title">
+            <img src="assets/images/radar-card.avif" alt="" class="card-img">
+            <span class="phase-date">August 2026</span>
 
-              <h3 id="item-2-title">Radar</h3>
-              <p>Radar looks for accessibility problems on any website you paste into the search bar. It scans the page,
-                shows you what's wrong, and explains each issue in plain English. It doesn't fix problems or guarantee
-                compliance, it points out where each issue lives on the page and gives you a prompt you can hand to a
-                developer or AI tool for review</p>
+            <h3 id="item-2-title">Radar</h3>
+            <p>Radar looks for accessibility problems on any website you paste into the search bar. It scans the page,
+              shows you what's wrong, and explains each issue in plain English. It doesn't fix problems or guarantee
+              compliance, it points out where each issue lives on the page and gives you a prompt you can hand to a
+              developer or AI tool for review</p>
 
-              <div>
-                <a href="https://radar.gogogravity.com" target="_blank" rel="noopener noreferrer">Try Radar Today!
-                  <!-- WCAG AAA: external links should provide context -->
-                  <img class="external-link-icon" src="assets/icons/external-link-dark.svg" alt="">
-                  <span class="sr-only"> (opens in a new tab)</span>
-                </a>
-              </div>
+            <div>
+              <a href="https://radar.gogogravity.com" target="_blank" rel="noopener noreferrer">Try Radar Today!
+                <!-- WCAG AAA: external links should provide context -->
+                <img class="external-link-icon" src="assets/icons/external-link-dark.svg" alt="">
+                <span class="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
 
             </div>
+
+
           </article>
         </li>
 
-
         <li>
-          <article aria-labelledby="item-1-title">
-            <img src="assets/images/orbit-radar.jpg" alt="" class="phase-img">
+          <article class="card" aria-labelledby="card-3-title">
+            <img src="assets/images/orbit-apollo.jpg" alt="" class="card-img">
+
             <div class="phase-content">
               <span class="phase-date">September 2026</span>
               <h3 id="item-1-title">Apollo</h3>
@@ -381,7 +148,6 @@
 
       </ul>
     </section>
-
 
   </main>
 

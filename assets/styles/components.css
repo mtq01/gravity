@@ -138,7 +138,7 @@
     line-height: var(--leading-tight);
 }
 
-/* ++++++++++ features ++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++ solution ++++++++++++++++++++++++++++++++++++++++++ */
 
 .card-title {
     font-size: var(--text-2xl);
@@ -189,16 +189,6 @@
 
 .research-list-links hr {
     margin: var(--space-sm) 0;
-}
-
-/* ++++++++++ phases ++++++++++++++++++++++++++++++++++++++++++ */
-
-.phase-list {
-    list-style-type: none;
-}
-
-.phase-img {
-    border-radius: var(--radius-10);
 }
 
 /* ++++++++++ methodology ++++++++++++++++++++++++++++++++++++++++++ */
@@ -255,7 +245,7 @@
         padding: var(--space-xl);
     }
 
-    .features-card-container {
+    .solution-card-container {
         padding: 0 var(--space-xl);
     }
 }
@@ -263,7 +253,7 @@
 /* desktop */
 @media (min-width: 64em) {
 
-    .features-card-container,
+    .solution-card-container,
     .phases {
         padding: 0 var(--gap-2);
     }
