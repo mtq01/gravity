@@ -1,0 +1,252 @@
+/*
+  Global stylesheet.
+  Load order matters here:
+    1. Tailwind and its helpers
+    2. shadcn base layer (its component tokens)
+    3. Our Gravity brand theme (colors, fonts, type scale)
+    4. Base element styles ported from the original site
+*/
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+  Keep dark styling opt-in.
+  Without this line Tailwind would switch `dark:` styles on for anyone
+  whose operating system is in dark mode. The Gravity site has its own
+  fixed light and dark areas, so we only want dark styles when a parent
+  element actually has the `.dark` class.
+*/
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Gravity brand theme.
+  Every value below becomes a Tailwind utility, for example:
+    --color-night   -> bg-night, text-night, border-night
+    --font-heading  -> font-heading
+    --text-5xl      -> text-5xl
+    --radius-brand  -> rounded-brand
+  These numbers come straight from the original tokens.css file.
+*/
+@theme {
+  /* ----- Brand colors ----- */
+  --color-bg: #fcf8f8; /* page background, a warm off-white */
+  --color-ink: #181717; /* main body text, almost black */
+  --color-brand: #1d4ed8; /* links and hover accents, a strong blue */
+  --color-night: #060d20; /* dark panels, cards, and buttons */
+  --color-paper: #fcf8f8; /* text and borders that sit on dark panels */
+
+  /* ----- Fonts (the variables come from app/fonts.ts) ----- */
+  --font-body: var(--font-atkinson), Arial, sans-serif;
+  --font-heading: var(--font-dm-serif), Georgia, serif;
+  --font-sans: var(--font-atkinson), Arial, sans-serif;
+
+  /*
+    Type scale.
+    clamp(min, preferred, max) means the text is never smaller than the
+    first value, never larger than the last, and scales with the screen
+    width in between. This is what keeps text readable on every device.
+  */
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+  --text-lg: 1.15rem;
+  --text-lg--line-height: 1.5;
+  --text-xl: clamp(1.15rem, 3.5vw + 0.5rem, 1.25rem);
+  --text-2xl: clamp(1.25rem, 4vw + 0.5rem, 1.5rem);
+  --text-3xl: clamp(1.5rem, 4.5vw + 0.75rem, 1.875rem);
+  --text-4xl: clamp(1.75rem, 4.75vw + 0.75rem, 2.25rem);
+  --text-5xl: clamp(2rem, 5vw + 1rem, 4rem);
+
+  /* ----- Rounded corners ----- */
+  --radius-brand-sm: 5px; /* buttons and small images */
+  --radius-brand: 10px; /* large panels and the hero */
+}
+
+/*
+  Bridge shadcn's utility names (bg-primary, text-foreground, border-border,
+  ring-ring, and so on) to the runtime CSS variables set in :root below.
+  "inline" means Tailwind writes `var(--primary)` into the utility, so the
+  value can still change at runtime if we ever add a theme switch.
+*/
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/*
+  Point shadcn's component tokens at the Gravity palette so any shadcn
+  component (like the Button) matches the rest of the site.
+*/
+:root {
+  --radius: 0.625rem; /* 10px, same as --radius-brand */
+
+  --background: var(--color-bg);
+  --foreground: var(--color-ink);
+
+  --card: var(--color-bg);
+  --card-foreground: var(--color-ink);
+  --popover: var(--color-bg);
+  --popover-foreground: var(--color-ink);
+
+  /* Primary = the dark button style used across the site */
+  --primary: var(--color-night);
+  --primary-foreground: var(--color-paper);
+
+  --secondary: #eeeae9;
+  --secondary-foreground: var(--color-ink);
+  --muted: #eeeae9;
+  --muted-foreground: #5b5a5a;
+  --accent: var(--color-brand);
+  --accent-foreground: var(--color-paper);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: rgba(24, 23, 23, 0.15);
+  --input: rgba(24, 23, 23, 0.2);
+  --ring: var(--color-brand); /* focus ring color */
+}
+
+/*
+  Base element styles.
+  Ported from the original reset.css and typography.css so the plain
+  HTML tags (headings, paragraphs, links) look the same as before.
+*/
+@layer base {
+  /* Give every element the same border color and a visible focus ring. */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.5; /* 1.5 is the WCAG minimum for body text */
+    color: var(--color-ink);
+    background-color: var(--color-bg);
+  }
+
+  /* All headings share the serif font and a tight line height. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    line-height: 1.1;
+    font-weight: 400;
+    font-synthesis: none; /* do not let the browser fake bold or italic */
+  }
+
+  h1 {
+    font-size: var(--text-5xl);
+  }
+  h2 {
+    font-size: var(--text-4xl);
+  }
+  h3 {
+    font-size: var(--text-3xl);
+  }
+  h4 {
+    font-size: var(--text-2xl);
+  }
+  h5 {
+    font-size: var(--text-xl);
+  }
+  h6 {
+    font-size: var(--text-lg);
+  }
+
+  p {
+    font-size: var(--text-base);
+  }
+
+  /* Plain links are blue and underlined, and turn dark on hover. */
+  a {
+    color: var(--color-brand);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-ink);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+
+  a:active {
+    opacity: 0.8;
+    color: var(--color-ink);
+  }
+
+  /* Media never overflows its container. */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/*
+  Small reusable pieces that are awkward to build with utility classes
+  alone. Kept tiny on purpose.
+*/
+@layer components {
+  /*
+    Dark see-through layer that sits between a background video and the
+    text on top of it. It keeps the white text readable (WCAG contrast).
+  */
+  .video-scrim {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.74);
+  }
+}
+
+/*
+  Short landscape phones.
+  Let the hero shrink to fit instead of filling the whole screen, so the
+  heading and button are not pushed out of view.
+*/
+@media (orientation: landscape) and (max-height: 37.5em) {
+  .hero-section {
+    height: auto;
+    min-height: 20rem;
+    padding-block: 2rem;
+  }
+}
+
+/*
+  Respect users who ask for less motion.
+  We hide the background videos and fall back to a solid dark color.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .background-video {
+    display: none;
+  }
+}
