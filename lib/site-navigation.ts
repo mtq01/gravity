@@ -19,6 +19,11 @@ export const primaryNavigationLinks: NavigationLink[] = [
     isExternal: false,
   },
   {
+    label: "Apollo",
+    href: "https://apollo.gogogravity.com",
+    isExternal: true,
+  },
+  {
     label: "Orbit",
     href: "/orbit",
     isExternal: false,

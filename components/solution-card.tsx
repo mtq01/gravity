@@ -30,7 +30,7 @@ export function SolutionCard({ solution }: SolutionCardProps) {
         alt=""
         width={1600}
         height={900}
-        className="aspect-[16/9] w-full rounded-brand-sm object-cover"
+        className="aspect-video w-full rounded-brand-sm object-cover"
       />
 
       <span>{solution.releaseDate}</span>
