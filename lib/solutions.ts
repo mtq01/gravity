@@ -26,7 +26,7 @@ export const solutions: Solution[] = [
     slug: "apollo",
     name: "Apollo",
     releaseDate: "September 2026",
-    imageSource: "/images/orbit-apollo.jpg",
+    imageSource: "/images/Apollo4.webp",
     description:
       "Built to solve the pain points that make traditional Enterprise Resource Planning software feel broken. Role-based login shows each buyer their own account-specific pricing, stock, and warehouse access. Smart parsing turns messy SKUs and old invoices into accurate quotes instantly. Buyers reorder straight from purchase history or paste in SKUs, and activity logs give full visibility into what's happening behind the scenes.",
     link: {
